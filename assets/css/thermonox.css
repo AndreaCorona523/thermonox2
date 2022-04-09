@@ -8,6 +8,12 @@ p{
     display: row;
 }
 
+.box-shadow-format{
+    border: 1px solid var(--orange);
+    box-shadow: 5px 10px 8px var(--orange);
+    text-align: center;
+}
+
 .caracteristicas_funcionamiento_button{
 	font-family: 'Montserrat';
     font-size: 16px;
@@ -119,16 +125,19 @@ p{
     min-height: 80px;
     margin-top: 0;
 }
-  
-.garantias_seguridad_list{
+
+.garantias_seguridad_container{
     display: flex;
     flex-direction: row;
 }
+  
+.garantias_seguridad_list{
+    width: 70%;
+}
 
 .garantias_seguridad_list li{
-	margin: 1.5% 2.5%;
+	margin: 1% 2.5%;
 	padding: 0 1%;
-    width: 33%;
 }
 
 .garantias_seguridad_list li::marker{
@@ -162,10 +171,14 @@ p{
     font-weight: bold;
 }
 
-.box-shadow-format{
-    border: 1px solid var(--orange);
-    box-shadow: 5px 10px 8px var(--orange);
-    text-align: center;
+.hero__atex-konform{
+    width: 20%;
+    padding: 0;
+    margin: auto;
+}
+
+.hero__atex-konform svg{
+    fill: black;
 }
 
 .industrias_aplicaciones_table{
@@ -436,12 +449,8 @@ p{
 		display: none;
 	}
 
-    .garantias_seguridad_list{
+    .garantias_seguridad_container{
         flex-direction: column;
-    }
-
-    .garantias_seguridad_list li,.industrias_aplicaciones_table_columns{
-        width: 100%;
     }
 
     .general_highlighted_text{
@@ -451,6 +460,14 @@ p{
     .general_title{
         margin-top: 8%;
         font-size: 36px;
+    }
+
+    .garantias_seguridad_list,.hero__atex-konform,.industrias_aplicaciones_table_columns{
+        width: 100%;
+    }
+
+    .hero__atex-konform{
+        margin: 20px auto;
     }
 
     .industrias_aplicaciones_table_text{
