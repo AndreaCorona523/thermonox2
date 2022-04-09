@@ -160,10 +160,12 @@ p{
 .general_highlighted_text{
     font-size: 24px;
     font-weight: bold;
-    text-align: center;
+}
+
+.box-shadow-format{
     border: 1px solid var(--orange);
     box-shadow: 5px 10px 8px var(--orange);
-    margin: 2%;
+    text-align: center;
 }
 
 .industrias_aplicaciones_table{
@@ -291,7 +293,6 @@ p{
     box-shadow: 5px 10px 8px var(--grey);
 }
 
-
 .services_list{
     font-weight: bold;
     width: 90%;
@@ -347,6 +348,7 @@ p{
     text-align: center;
     background-color: rgb(235 91 37 / 85%);
     padding: 5%;
+    margin: 0;
 }
   
 
@@ -438,6 +440,10 @@ p{
         flex-direction: column;
     }
 
+    .garantias_seguridad_list li,.industrias_aplicaciones_table_columns{
+        width: 100%;
+    }
+
     .general_highlighted_text{
         text-align: center;
     }
@@ -446,11 +452,6 @@ p{
         margin-top: 8%;
         font-size: 36px;
     }
-
-    .industrias_aplicaciones_table_columns{
-        width: 100%;
-    }
-	
 
     .industrias_aplicaciones_table_text{
 		border-bottom: 1px solid var(--orange);
@@ -464,6 +465,15 @@ p{
     .limitaciones_aplicaciones_container,.sectores_aplicaciones_container {
 		width: 100%;
         padding: 10%;
+    }
+
+    .seguridad_thermonox_container{
+        flex-direction: column;
+    }
+
+    .seguridad_thermonox_info_container{
+        width: 100%;
+        margin: 5% 0;
     }
 
     .subtitle2{
