@@ -4,13 +4,22 @@
 	background-color: rgb(68 68 68 / 20%);
 	display: flex;
 	flex-direction: row;
+	align-items: stretch;
 	font-size: 20px;
+}
+
+.acerca_thermonoxilo_container--end{
+	justify-content: flex-end;
 }
 
 .acerca_thermonoxilo_info_container{
 	width: 60%;
     margin: auto 2%;
     padding: 1%;
+}
+
+.acerca_thermonoxilo_info_container--right{
+	margin-right: 10%;
 }
 
 .aplicacion_thermonoxilo_container{
@@ -58,15 +67,15 @@
 }
 
 .thermonoxilo_img_container{
-	max-width: 350px;
-	max-height: 450px;
+	width: 50%;
+	max-width: 400px;
+	/* background-color: red; */
 }
 
 .thermonoxilo_image{
 	width: 100%;
-	max-width: 350px;
-	height: auto;
-	max-height: 450px;
+	height: 100%;
+	object-fit: cover;
 }
 
 .thermonoxilo_images_container{
@@ -90,8 +99,10 @@
 
 @media(max-width: 768px){
 	.acerca_thermonoxilo_container{
+		color: var(--grey);
 		flex-direction: column;
 		background-color: white;
+		align-items: center;
 	}
 
 	.acerca_thermonoxilo_info_container{
