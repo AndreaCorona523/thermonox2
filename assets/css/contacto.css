@@ -3,7 +3,7 @@ p{
 }
 
 .colaboraciones_container{
-	width: 50%;
+	width: 60%;
 	height: 100%;
 	margin: 1%;
 }
@@ -89,6 +89,7 @@ label {
 #privacy_policy_label{
     text-align: left;
 }
+
 select {
     border-color: #dddddd;
     height: 32px;
@@ -99,8 +100,14 @@ select {
     padding-left: 2%;
 }
 
+.subtitle5{
+	font-size: 24px;
+    margin: 1% 0; 	
+    padding: 0 1%;
+}
+
 .support_contact_container{
-	width: 50%;
+	width: 40%;
 	height: 100%;
 	margin: 1%;
 }
