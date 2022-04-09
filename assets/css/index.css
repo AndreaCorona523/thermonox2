@@ -1,0 +1,349 @@
+@import './fonts.css';
+@import './icons.css';
+@import './root.css';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+    background-color: var(--brown);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    color: var(--grey);
+    font-family: 'Montserrat';
+    min-height: 100%;
+    overflow-x: hidden;
+    transition: transform 0.5s ease;
+}
+
+.body--offcanvas{
+    transform: translateX(270px);
+    overflow: hidden;
+    height: 100vh;
+}
+
+.cover{
+    display: none;
+    position: absolute;
+    background-color: var(--grey);
+    opacity: .1;
+    height: 100%;
+    min-height: 100vh;
+    width: 100vw;
+    z-index: 1;
+}
+
+.cover--show{
+    display: block;
+}
+
+ul{
+    list-style: none;
+}
+
+.header_container{
+    background-color: var(--orange);
+    padding: 0 25px;
+    position: relative;
+}
+
+.header_container::after {
+    content: "";
+    position: absolute;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 5px, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 5px, 0 100%);
+    background-color: var(--orange);
+    left: 0;
+    top: calc(100% - 5px);
+    width: 100%;
+    height: calc(30% + 5px);
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.header__logo{
+    width: 100%;
+}
+
+.header__logo_container{
+    display: block;
+    width: 280px;
+    max-width: 65%;
+    padding: 5px 0;
+}
+
+.language_container{
+    display: none;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    flex-grow: 1;
+}
+
+.menu-icon{
+    color: white;
+    font-size: 32px;
+    position: absolute;
+    left: 0;
+}
+
+.navbar{
+    display: none;
+}
+
+.offcanvas{
+    display: none;
+    color: white;
+    position: absolute;
+    left: -270px;
+    background-color: var(--brown);
+    height: 0;
+    width: 270px;
+    overflow: auto;
+    line-height: 22px;
+    z-index: 11;
+}
+
+.offcanvas--show{
+    height: 100vh;
+    display: block;
+}
+
+.offcanvas a{
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+.offcanvas_language{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px 34px;
+}
+
+.offcanvas_language__item{
+    display: flex;
+    align-items: flex-end;
+    height: 32px;
+}
+
+.offcanvas_nav__item > a{
+    padding: 10px 15px;
+}
+
+.offcanvas_nav__item--selected > a{
+    color: var(--yellow);
+}
+
+.offcanvas_subnav{
+    padding: 5px 0;
+}
+
+.offcanvas_subnav__item > a{
+    padding: 2px 20px;
+}
+
+.offcanvas_nav__item > a:hover,.offcanvas_subnav__item > a:hover{
+    color: white;
+    background-color: var(--orange);
+}
+
+.offcanvas_subnav__item--selected > a{
+    color: var(--yellow);
+}
+
+@media (min-width: 768px){
+    body{
+        transition: none;
+    }
+
+    .body--offcanvas{
+        transform: none;
+        overflow: auto;
+    }
+
+    .contact{
+        display: flex;
+        gap: 1rem;
+        font-size: 18px;
+        align-items: center;
+        justify-self: center;
+        padding: 0 2rem;
+    }
+
+    .contact__item{
+        color: white;
+        text-decoration: none;
+    }
+
+    .cover--show{
+        display: none;
+    }
+
+    .dropdown__option > a{
+        display: flex;
+        padding: 5px 20px;
+        color: var(--grey);
+        text-decoration: none;
+    }
+
+    .dropdown__option > a:hover{
+        display: flex;
+        padding: 5px 20px;
+        color: white;
+        text-decoration: none;
+        background-color: var(--orange);
+    }
+
+    .globe-icon {
+        color: white;
+        font-size: 24px;
+    }
+
+    .header, .language_container{
+        margin: auto;
+        max-width: 930px;
+    }
+
+    .header{
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 20px;
+        padding-bottom: 20px;
+    }
+
+    .header__logo_container{
+        padding: 0;
+        width: 40%;
+        max-width: 400px;
+    }
+
+    .language_container{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .language_icon{
+        background-color: var(--yellow);
+        display: flex;
+        padding: 1px 12px;
+    }
+
+    .language_menu{
+        position: relative;
+    }
+
+    .language_menu__dropdown{
+        display: none;
+        width: 100%;
+        background-color: var(--light-background);
+        padding: 5px;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .language_menu:hover .language_menu__dropdown{
+        display: block;
+    }
+
+    .language_menu__option a{
+        color: var(--grey);
+        display: flex;
+        padding: 5px 20px;
+        text-decoration: none;
+    }
+
+    .language_menu__option a:hover{
+        color: white;
+        background-color: var(--orange);
+    }
+
+    .language_menu__select{
+        display: flex;
+        align-items: stretch;
+    }
+    
+    .menu-icon{
+        display: none;
+    }
+
+    .navbar{
+        font-size: 18px;
+        display: flex;
+        gap: 0 20px;
+        flex-wrap: wrap;
+    }
+
+    .navbar__dropdown{
+        display: none;
+        width: 220px;
+        position: absolute;
+        left: -20px;
+        padding: 15px 0;
+        font-size: 16px;
+        background-color: var(--dropdown-background);
+        z-index: 1;
+    }
+
+    .navbar__item{
+        position: relative;
+    }
+
+    .navbar__item > a{
+        text-decoration: none;
+        color: var(--yellow);
+    }
+
+    .navbar__item--selected a{
+        color: var(--grey);
+    }
+    
+    .navbar__item a:hover{
+        color: rgb(68, 68, 68);
+    }
+
+    .navbar__item:hover .navbar__dropdown{
+        display: block;
+    }
+
+    .offcanvas{
+        display: none;
+    }
+
+    .selected_language{
+        background-color: var(--dropdown-background);
+        display: flex;
+        align-items: center;
+        padding: 0 12px;
+    }
+
+    .selected_language:hover{
+        cursor: pointer;
+    }
+
+}
+
+@media (min-width: 1024px){
+    .header, .language_container{
+        max-width: 1130px;
+    }
+}

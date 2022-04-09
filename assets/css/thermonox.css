@@ -1,0 +1,481 @@
+p{
+    padding: 1%;
+}
+
+.aplicaciones_container{
+    width: 100%;
+    display: flex;
+    display: row;
+}
+
+.caracteristicas_funcionamiento_button{
+	font-family: 'Montserrat';
+    font-size: 16px;
+    background: none;
+    border: none;
+    margin: 3% 0;
+}
+
+.caracteristicas_funcionamiento_table{
+	text-align: center;
+	justify-content: center;
+}
+
+.caracteristicas_funcionamiento_table td:nth-child(n+2){
+    border-left: 1px solid var(--orange);
+    padding: 0 0.5% 0 0.5%;
+}
+
+.caracteristicas_funcionamiento_table_text{
+	border-top: 1px solid var(--orange);
+	border-bottom: 1px solid var(--orange);
+	height: auto;
+	padding: 2%;
+    text-align: center;
+}
+
+.caracteristicas_funcionamiento_selected_button,.caracteristicas_funcionamiento_button:hover{
+	background-color: rgb(235 91 37 / 60%);
+}
+
+.caracteristica_slide {
+    display: none;
+    padding: 5%;
+    text-align: center;
+    width: 90%;
+}
+
+.caracteristicas_funcionamiento_slides_container {
+    display: flex;
+    display: row;
+}
+
+.caracteristicas_funcionamiento_slideshow_container{
+    display: none;
+}
+
+
+.division_container{
+	display: flex;
+	flex-direction: row;
+	height: 5px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color:  var(--grey);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dot-container {
+    text-align: center;
+    padding: 20px;
+}
+  
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+    transition-timing-function: ease-out;
+}
+  
+.funcionamiento_prev, .funcionamiento_next {
+    cursor: pointer;
+    width: 5%;
+    padding: 16px;
+    color: var(--orange);
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    margin: auto 0;
+}
+  
+
+.funcionamiento_next {
+    position: relative;
+    margin-right: auto;
+    border-radius: 3px 0 0 3px;
+}
+  
+.funcionamiento_prev:hover, .funcionamiento_next:hover {
+    background-color: rgb(245 154 120);
+    color: white;
+}
+
+.footer_about{
+    color: white;
+    background-color: var(--brown);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 80px;
+    margin-top: 0;
+}
+  
+.garantias_seguridad_list{
+    display: flex;
+    flex-direction: row;
+}
+
+.garantias_seguridad_list li{
+	margin: 1.5% 2.5%;
+	padding: 0 1%;
+    width: 33%;
+}
+
+.garantias_seguridad_list li::marker{
+    content: "\f00c";
+    font-family: "FontAwesome";
+    color: #8cc14c;
+}
+
+.general_container{
+    width: 100%;
+    height: auto;
+}
+  
+.general_title{
+    font-weight: 400;
+    color: var(--orange);
+    text-align: center;
+    font-size: 42px;
+    padding-top: 3%;
+    margin: 2% 2% 0 2%;
+}
+  
+.general_info_container{
+    width: 90%;
+    text-align: justify;
+    margin: 0 auto;
+}
+  
+.general_highlighted_text{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid var(--orange);
+    box-shadow: 5px 10px 8px var(--orange);
+    margin: 2%;
+}
+
+.industrias_aplicaciones_table{
+	display: flex;
+	flex-direction: row;
+}
+
+.industrias_aplicaciones_table_columns{
+	width: 33%;
+	text-align: center;
+	align-items: center;
+}
+
+.industrias_aplicaciones_table_title{
+	font-size: 22px;
+	padding: 5% 2.5% 2% 2.5%;
+	margin: 0 5%;
+	border-top: 2px solid var(--orange);
+	text-align: center;
+}
+
+
+.industrias_aplicaciones_table_text{
+	padding: 4% 2.5% 2% 2.5%;
+	margin: 0 5%;
+	text-align: center;
+}
+
+.industrias_aplicaciones_division{
+	margin: 0 2.5%;
+    border-bottom: 2px solid var(--orange);
+    width: 33%;
+}
+  
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+.limitaciones_aplicaciones_container{
+    width: 50%;
+    margin: 2%;
+    padding: 4%;
+    background-color: rgb(235 91 37 / 60%);
+    border-top-right-radius: 400px 50px;
+    border-bottom-left-radius: 400px 50px;
+}
+
+.limitaciones_aplicaciones_list{
+	margin: 0 auto 2% auto;
+}
+
+.limitaciones_aplicaciones_list li:nth-child(n+2){
+	border-top: 1px solid #dddddd;
+    padding-top: 3%;
+}
+
+.limitaciones_aplicaciones_list li{
+	margin: 4%;
+    padding: 0 1%;
+}
+
+.limitaciones_aplicaciones_list li::marker{
+	content: "\f00d";
+    font-family: "FontAwesome";
+    color: var(--orange);
+}
+
+
+.main_info_container{
+    height: auto;
+    width: 90%; 
+    margin: 0 auto;
+    display: flex;
+    flex-direction:row;
+    padding-top: 1%;
+}
+  
+.principal_img_container{
+    width: 100%;
+    height: 480px;
+    background-image: url("../images/acercaThermonox/m-h-hofmeir-pano.jpg");
+    background-position: 50% -57.7575px;
+}
+
+.sectores_aplicaciones_container{
+    width: 50%;
+    margin: 2%;
+    padding: 4%;
+    background-color: rgb(250 185 0 / 60%);
+    border-top-right-radius: 400px 50px;
+    border-bottom-left-radius: 400px 50px;
+}
+
+
+.sectores_aplicaciones_list li{
+	margin: 1% 4%;
+	padding: 0 1%;
+}
+
+.sectores_aplicaciones_list li::marker{
+    content: "\f00c";
+    font-family: "FontAwesome";
+    color: #8cc14c;
+}
+
+.seguridad_thermonox_padding{
+    padding: 10%;
+}
+
+.seguridad_thermonox_container{
+    display: flex;
+    flex-direction: row;
+}
+
+#seguridad_thermonox_font-size{
+    font-size: 18px;
+}
+
+.seguridad_thermonox_info_container{
+    margin: 2%;
+    width: 33%;
+    background-color: rgb(68 68 68 / 20%);
+    background-color: rgb(250 185 0 / 70%);
+    box-shadow: 5px 10px 8px var(--grey);
+}
+
+
+.services_list{
+    font-weight: bold;
+    width: 90%;
+    margin: 1% auto 3% auto;
+}
+  
+.services_list li{
+    margin: 2%;
+    padding-left: 1%;
+}
+  
+.services_list li::marker{
+    content: "\f00c";
+    font-family: "FontAwesome";
+    color: #8cc14c;
+}
+
+.slideshow_image{
+    height: auto;
+    width: 100%;
+    display: block;
+}
+  
+.slideshow_images{
+    display: none;
+    height: 100%;
+  
+}
+  
+.slide_title {
+    color: var(--orange);
+    text-align: center;
+    font-size: 22spx;
+}
+
+
+.subtitle1{
+	font-size: 20px;
+	margin: 1% 0;
+}
+
+.subtitle2{
+	font-size: 25px;
+	margin: 2% 0 5% 0;
+	padding: 0 1%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.subtitle3{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgb(235 91 37 / 85%);
+    padding: 5%;
+}
+  
+
+.thermonox_prev, .thermonox_next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+  
+.thermonox_next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+  
+.thermonox_prev:hover, .thermonox_next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.thermonox_slideshow_container{
+    position: relative;
+    margin: 0 auto 0 auto;
+    width: 100%;
+    
+}
+
+.ventajas_list{
+    width: 90%;
+    margin: 1% auto 3% auto;
+    column-count: 2;
+}
+
+.ventajas_list li{
+    padding-left: 1%;
+    padding-right: 3%;
+}
+
+.ventajas_list li::marker{
+    content: "\f00c";
+    font-family: "FontAwesome";
+    color: #8cc14c;
+}
+
+.ventajas_list_title{
+	font-size: 18px;
+    font-weight: bold;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.wide_button{
+    width: 30%;
+}
+    
+.active, .dot:hover {
+    background-color: var(--orange);
+}
+
+@media(max-width: 768px){
+    p{
+        margin: 2%;
+    }
+
+    .aplicaciones_container, .industrias_aplicaciones_table, .sectores_aplicaciones_list{
+		flex-direction: column;
+	}
+
+    .caracteristicas_funcionamiento_container{
+        display: none;
+    }
+
+    .caracteristicas_funcionamiento_slideshow_container{
+        display: block;
+    }
+
+    .division_container{
+		display: none;
+	}
+
+    .garantias_seguridad_list{
+        flex-direction: column;
+    }
+
+    .general_highlighted_text{
+        text-align: center;
+    }
+
+    .general_title{
+        margin-top: 8%;
+        font-size: 36px;
+    }
+
+    .industrias_aplicaciones_table_columns{
+        width: 100%;
+    }
+	
+
+    .industrias_aplicaciones_table_text{
+		border-bottom: 1px solid var(--orange);
+	}
+
+	.industrias_aplicaciones_table_title{
+		border-top: none;
+		padding: 3% 2.5% 2% 2.5%;
+	}
+
+    .limitaciones_aplicaciones_container,.sectores_aplicaciones_container {
+		width: 100%;
+        padding: 10%;
+    }
+
+    .subtitle2{
+        margin: 5%;
+	}
+
+    .ventajas_list{
+        column-count: 1;
+    }
+
+}
+
+
+
+

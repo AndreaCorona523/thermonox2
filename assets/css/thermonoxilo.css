@@ -1,0 +1,135 @@
+.acerca_thermonoxilo_container{
+	padding: 1%;
+	margin: 1%;
+	background-color: rgb(68 68 68 / 20%);
+	display: flex;
+	flex-direction: row;
+	font-size: 20px;
+}
+
+.acerca_thermonoxilo_info_container{
+	width: 60%;
+    margin: auto 2%;
+    padding: 1%;
+}
+
+.aplicacion_thermonoxilo_container{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+#aplicacion_thermonoxilo_text{
+	padding: auto;
+	font-size: 24px;
+	margin: auto 5%;
+
+}
+
+.float-right{
+	float: right;
+	width: 90vw;
+}
+
+.float-left{
+	float: left;
+	width: 90vw;
+}
+
+.datos_tecnicos_list{
+	padding: 1% 3%;
+}
+
+.datos_tecnicos_list li {
+    padding-left: 1%;
+    padding-right: 3%;
+	margin: 2%;
+}
+
+.datos_tecnicos_list li::marker{
+    content: "\f0ad";
+/*    content: "\f111";*/
+    font-family: "FontAwesome";
+    color: #000000;
+}
+
+.info_container-margin{
+	margin-left: 10%;
+}
+
+.thermonoxilo_img_container{
+	max-width: 350px;
+	max-height: 450px;
+}
+
+.thermonoxilo_image{
+	width: 100%;
+	max-width: 350px;
+	height: auto;
+	max-height: 450px;
+}
+
+.thermonoxilo_images_container{
+	width: 50%;
+	display: flex;
+	flex-direction: row;
+}
+
+.seguridad_thermonoxilo_text{
+	font-size: 20px;
+	width: 70%;
+	margin: 0 auto 2.5% auto;
+}
+
+.subtitle4{
+	font-size: 24px;
+	font-weight: bold;
+    margin: 1% 0; 	
+    padding: 0 1%;
+}
+
+@media(max-width: 768px){
+	.acerca_thermonoxilo_container{
+		flex-direction: column;
+		background-color: white;
+	}
+
+	.acerca_thermonoxilo_info_container{
+		width: 100%;
+	}
+
+	.aplicacion_thermonoxilo_container{
+		flex-direction: column;
+	}
+
+	.float-remove{
+		float: none;
+		width: 100%;
+	}
+	
+	.order-column-reverse{
+		flex-direction: column-reverse;
+	}
+
+	.seguridad_thermonoxilo_text{
+		font-size: 20px;
+		width: 90%;
+		margin: 5% auto;
+	}
+    
+    .subtitle3{
+		text-align: center;
+	}
+
+	.thermonoxilo_images_container{
+		flex-direction: column;
+	}
+
+	.thermonoxilo_img_container{
+		width: 100%;
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+
+    
+}
