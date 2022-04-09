@@ -8,9 +8,25 @@ p{
 	margin: 1%;
 }
 
+.contacto_container{
+    width: 90%;
+    margin: auto;
+    padding: 2%;
+    border-radius: 15px;
+    background-color: var(light-background);
+    border: 5px inset var(--orange);
+}
+
+.contacto_container p{
+    text-align: center;
+}
+
 .contacto_form_container{
 	margin: 0 auto;
+    column-count: 2;
+    width: 90%;
 }
+
 
 .contacto_global_link, .politica_privacidad_link{
 	color: var(--orange);
@@ -102,6 +118,12 @@ textarea{
 
     .contacto_form_container{
         text-align: center;
+        column-count: 1;
+    }
+    
+    .enviar_button{
+        margin: 5%;
+        padding: 5% 10%;
     }
 
     label {

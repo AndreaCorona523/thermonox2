@@ -8,6 +8,17 @@ p{
     display: row;
 }
 
+.aplicaciones_info_container{
+    width: 50%;
+    margin: 2%;
+    padding: 4%;
+    background-color: var(light-background);
+    border: 5px solid var(--orange);
+    box-shadow: 5px 10px 8px rgb(68 68 68 / 50%);
+    border-top-right-radius: 400px 50px;
+    border-bottom-left-radius: 400px 50px;
+}
+
 .box-shadow-format{
     border: 1px solid var(--orange);
     box-shadow: 5px 10px 8px var(--orange);
@@ -59,7 +70,6 @@ p{
 .caracteristicas_funcionamiento_slideshow_container{
     display: none;
 }
-
 
 .division_container{
 	display: flex;
@@ -218,15 +228,6 @@ p{
     to {opacity: 1}
 }
 
-.limitaciones_aplicaciones_container{
-    width: 50%;
-    margin: 2%;
-    padding: 4%;
-    background-color: rgb(235 91 37 / 60%);
-    border-top-right-radius: 400px 50px;
-    border-bottom-left-radius: 400px 50px;
-}
-
 .limitaciones_aplicaciones_list{
 	margin: 0 auto 2% auto;
 }
@@ -263,16 +264,6 @@ p{
     background-image: url("../images/acercaThermonox/m-h-hofmeir-pano.jpg");
     background-position: 50% -57.7575px;
 }
-
-.sectores_aplicaciones_container{
-    width: 50%;
-    margin: 2%;
-    padding: 4%;
-    background-color: rgb(250 185 0 / 60%);
-    border-top-right-radius: 400px 50px;
-    border-bottom-left-radius: 400px 50px;
-}
-
 
 .sectores_aplicaciones_list li{
 	margin: 1% 4%;
@@ -470,6 +461,10 @@ p{
         margin: 20px auto;
     }
 
+    .hero__atex-konform svg{
+        fill: black;
+    }
+
     .industrias_aplicaciones_table_text{
 		border-bottom: 1px solid var(--orange);
 	}
@@ -479,7 +474,7 @@ p{
 		padding: 3% 2.5% 2% 2.5%;
 	}
 
-    .limitaciones_aplicaciones_container,.sectores_aplicaciones_container {
+    .aplicaciones_info_container{
 		width: 100%;
         padding: 10%;
     }
