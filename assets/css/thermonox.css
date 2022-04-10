@@ -451,8 +451,8 @@ p {
 
     /*Adjust margin and reduce font-size of general title*/
     .general_title {
-        margin-top: 8%;
         font-size: 36px;
+        margin-top: 8%;   
     }
 
     /*Add top margin to atex logo */
