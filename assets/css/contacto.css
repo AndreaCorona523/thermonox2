@@ -2,87 +2,86 @@ p{
 	text-align: justify;
 }
 
-.colaboraciones_container{
-	width: 60%;
+/* Format colaboration container*/
+.colaborations_container{
 	height: 100%;
 	margin: 1%;
+    width: 60%;
 }
 
-.contacto_container{
-    width: 90%;
-    margin: auto;
-    padding: 2%;
-    border-radius: 15px;
+/* Format of contact container */
+.contact_container{
     background-color: var(light-background);
     border: 5px inset var(--orange);
+    border-radius: 15px;
+    margin: auto;
+    padding: 2%;
+    width: 90%;
 }
 
-.contacto_container p{
+/* Text alignment of contact form*/
+.contact_container p{
     text-align: center;
 }
 
-.contacto_form_container{
-	margin: 0 auto;
+/* Contact form aligment and arrangement in columns*/
+.contact_form_container{
     column-count: 2;
+    margin: 0 auto;
     width: 90%;
 }
 
-
-.contacto_global_link, .politica_privacidad_link{
+/*Format of in-text links*/
+.contact_global_link, .privacy_policy_link{
 	color: var(--orange);
 	text-decoration: none;
 }
 
-.enviar_button{
-	background-color: var(--orange);
-    color: #ffffff;
-    border: none;
-    padding: 5px 5px;
-    text-decoration: none;
-    min-width: 20%;
-    margin: 0 0 0 40%;
-    font-family: inherit;
-    font-size: inherit;
-}
-
+/*Margin between each form field*/
 form li + li {
     margin-top: 1em;
 }
 
+/*Format of input and textarea fields of contact form*/
 input,textarea{
-	border: 1px solid #dddddd;
+	border: 1px solid var(--yellow);
 	height: 32px;
 	min-height: 22px;
 	width: 220px;
 }
 
+/*Format text entries of fields of contact form*/
 input[type="text"],input[type="email"],textarea {
-	padding: 4px 6px;
 	font-size: 16px;
     margin: 0 auto;
+    padding: 4px 6px;
 }
 
+/*Size and alignment of checkbox*/
 input[type="checkbox"]{
-    width: auto;
-    min-height: 10px;
     height: 0;
     margin: 0 auto;
+    min-height: 10px;
+    width: auto;
 }
 
+/*Format of invalid input for field in contact form*/
 input:invalid {
-    padding: 4px 6px;
-    border: 1px solid var(--orange);
     background: #f2dede;
+    border: 1px solid var(--orange);
+    padding: 4px 6px;
 }
 
+/*Label alignment for contact form*/
 label {
     display: inline-block;
+    padding: 2% 0 0 2%; 
     text-align: right;
     width: 40%;
-    padding: 2% 0 0 2%; 
 }
 
-#mensaje{
+/*Minimum height for message field*/
+#message{
 	min-height: 150px;
 }
 
@@ -91,7 +90,7 @@ label {
 }
 
 select {
-    border-color: #dddddd;
+    border: 1px solid var(--yellow);
     height: 32px;
     min-height: 22px;
 	width: 220px;
@@ -100,35 +99,52 @@ select {
     padding-left: 2%;
 }
 
+/*Format of send button of contact form*/
+.send_button{
+	background-color: var(--orange);
+    border: none;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: inherit;
+    margin: 0 0 0 40%;
+    min-width: 20%;
+    padding: 5px 5px;
+    text-decoration: none;
+}
+
+/*Subtitle format for contact subtitles*/
 .subtitle5{
 	font-size: 24px;
     margin: 1% 0; 	
     padding: 0 1%;
 }
 
-.support_contact_container{
-	width: 40%;
+/*Size adjustment of support info container */
+.support_info_container{
 	height: 100%;
 	margin: 1%;
+    width: 40%;
 }
 
+/*Alignment of text in textarea of contact form*/
 textarea{
 	overflow: auto;
     vertical-align: top;
 }
 
+/*Format and size adjustment for mobile devices*/
 @media (max-width: 768px){
 
-    .colaboraciones_container{
+    .colaborations_container,.support_info_container{
         width: 100%;
     }
 
-    .contacto_form_container{
+    .contact_form_container{
         text-align: center;
         column-count: 1;
     }
     
-    .enviar_button{
+    .send_button{
         margin: 5%;
         padding: 5% 10%;
     }
@@ -140,9 +156,5 @@ textarea{
 
     .main_info_container{
         flex-direction: column;
-    }
-    
-    .support_contact_container{
-        width: 100%;
     }
 }
