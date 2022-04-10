@@ -1,7 +1,3 @@
-p{
-	text-align: justify;
-}
-
 /* Format colaboration container*/
 .colaborations_container {
 	height: 100%;
@@ -112,13 +108,6 @@ select {
     text-decoration: none;
 }
 
-/*Subtitle format for contact subtitles*/
-.subtitle5 {
-	font-size: 24px;
-    margin: 1% 0; 	
-    padding: 0 1%;
-}
-
 /*Size adjustment of support info container */
 .support_info_container {
 	height: 100%;
@@ -146,18 +135,13 @@ textarea {
     }
 
     /*Align text to center*/
-    .contact_form_container, label, .subtitle5 {
+    .contact_form_container, label {
         text-align: center;
     }
 
     /*Add margin between labels and fields in contact form*/
     label {
         margin: 2% auto;
-    }
-
-    /*Set display direction to column*/
-    .main_info_container {
-        flex-direction: column;
     }
 
     /*Adjust margin and padding of send button*/
