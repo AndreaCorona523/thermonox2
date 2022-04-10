@@ -5,82 +5,78 @@ document.getElementsByTagName('head')[0].appendChild(script);
 
 
 $(document).ready(()=> {
-	$('#texto_calefacciones').show();
-	$('#texto_calentamiento').hide();
-	$('#texto_circulacion').hide();
-	$('#texto_regulacion').hide();
-	$('#texto_aire').hide();
-	$('#td_mostrarCalefactores').addClass("caracteristicas_funcionamiento_selected_button");
+	$('#calefacciones_text').show();
+	$('#calentamiento_text').hide();
+	$('#circulacion_text').hide();
+	$('#regulacion_text').hide();
+	$('#aire_text').hide();
+	$('#calefactores_show_td').addClass("characteristics_functioning_selected_button");
 
-	$('#mostrarCalefactores').click(function() {
-		$('#texto_calefacciones').show();
-		$('#texto_calentamiento').hide();
-		$('#texto_circulacion').hide();
-		$('#texto_regulacion').hide();
-		$('#texto_aire').hide();
-		$('#td_mostrarCalefactores').addClass("caracteristicas_funcionamiento_selected_button");
-		$('#td_mostrarCalentamiento').removeClass("caracteristicas_funcionamiento_selected_button");
-		$('#td_mostrarCirculacion').removeClass("caracteristicas_funcionamiento_selected_button");
-		$('#td_mostrarRegulacion').removeClass("caracteristicas_funcionamiento_selected_button");
-		$('#td_mostrarAire').removeClass("caracteristicas_funcionamiento_selected_button");
+	$('#calefactores_show').click(function() {
+		$('#calefacciones_text').show();
+		$('#calentamiento_text').hide();
+		$('#circulacion_text').hide();
+		$('#regulacion_text').hide();
+		$('#aire_text').hide();
+		$('#calefactores_show_td').addClass("characteristics_functioning_selected_button");
+		$('#calentamiento_show_td').removeClass("characteristics_functioning_selected_button");
+		$('#circulacion_show_td').removeClass("characteristics_functioning_selected_button");
+		$('#regulacion_show_td').removeClass("characteristics_functioning_selected_button");
+		$('#aire_show_td').removeClass("characteristics_functioning_selected_button");
 
 	});	
 
-	$('#mostrarCalentamiento').click(function() {
-		$('#texto_calefacciones').hide();
-		$('#texto_calentamiento').show();
-		$('#texto_circulacion').hide();
-		$('#texto_regulacion').hide();
-		$('#texto_aire').hide();
-		$('#td_mostrarCalefactores').removeClass("caracteristicas_funcionamiento_selected_button");
-		$('#td_mostrarCalentamiento').addClass("caracteristicas_funcionamiento_selected_button");
-		$('#td_mostrarCirculacion').removeClass("caracteristicas_funcionamiento_selected_button");
-		$('#td_mostrarRegulacion').removeClass("caracteristicas_funcionamiento_selected_button");
-		$('#td_mostrarAire').removeClass("caracteristicas_funcionamiento_selected_button");
+	$('#calentamiento_show').click(function() {
+		$('#calefacciones_text').hide();
+		$('#calentamiento_text').show();
+		$('#circulacion_text').hide();
+		$('#regulacion_text').hide();
+		$('#aire_text').hide();
+		$('#calefactores_show_td').removeClass("characteristics_functioning_selected_button");
+		$('#calentamiento_show_td').addClass("characteristics_functioning_selected_button");
+		$('#circulacion_show_td').removeClass("characteristics_functioning_selected_button");
+		$('#regulacion_show_td').removeClass("characteristics_functioning_selected_button");
+		$('#aire_show_td').removeClass("characteristics_functioning_selected_button");
 	});
 
-	$('#mostrarCirculacion').click(function() {
-		$('#texto_calefacciones').hide();
-		$('#texto_calentamiento').hide();
-		$('#texto_circulacion').show();
-		$('#texto_regulacion').hide();
-		$('#texto_aire').hide();
-		$('#td_mostrarCalefactores').removeClass("caracteristicas_funcionamiento_selected_button");
-		$('#td_mostrarCalentamiento').removeClass("caracteristicas_funcionamiento_selected_button");
-		$('#td_mostrarCirculacion').addClass("caracteristicas_funcionamiento_selected_button");
-		$('#td_mostrarRegulacion').removeClass("caracteristicas_funcionamiento_selected_button");
-		$('#td_mostrarAire').removeClass("caracteristicas_funcionamiento_selected_button");
+	$('#circulacion_show').click(function() {
+		$('#calefacciones_text').hide();
+		$('#calentamiento_text').hide();
+		$('#circulacion_text').show();
+		$('#regulacion_text').hide();
+		$('#aire_text').hide();
+		$('#calefactores_show_td').removeClass("characteristics_functioning_selected_button");
+		$('#calentamiento_show_td').removeClass("characteristics_functioning_selected_button");
+		$('#circulacion_show_td').addClass("characteristics_functioning_selected_button");
+		$('#regulacion_show_td').removeClass("characteristics_functioning_selected_button");
+		$('#aire_show_td').removeClass("characteristics_functioning_selected_button");
 	});
 
-	
-
-	$('#mostrarRegulacion').click(function() {
-		$('#texto_calefacciones').hide();
-		$('#texto_calentamiento').hide();
-		$('#texto_circulacion').hide();
-		$('#texto_regulacion').show();
-		$('#texto_aire').hide();
-		$('#td_mostrarCalefactores').removeClass("caracteristicas_funcionamiento_selected_button");
-		$('#td_mostrarCalentamiento').removeClass("caracteristicas_funcionamiento_selected_button");
-		$('#td_mostrarCirculacion').removeClass("caracteristicas_funcionamiento_selected_button");
-		$('#td_mostrarRegulacion').addClass("caracteristicas_funcionamiento_selected_button");
-		$('#td_mostrarAire').removeClass("caracteristicas_funcionamiento_selected_button");
+	$('#regulacion_show').click(function() {
+		$('#calefacciones_text').hide();
+		$('#calentamiento_text').hide();
+		$('#circulacion_text').hide();
+		$('#regulacion_text').show();
+		$('#aire_text').hide();
+		$('#calefactores_show_td').removeClass("characteristics_functioning_selected_button");
+		$('#calentamiento_show_td').removeClass("characteristics_functioning_selected_button");
+		$('#circulacion_show_td').removeClass("characteristics_functioning_selected_button");
+		$('#regulacion_show_td').addClass("characteristics_functioning_selected_button");
+		$('#aire_show_td').removeClass("characteristics_functioning_selected_button");
 
 	});
 
-	
-
-	$('#mostrarAire').click(function() {
-		$('#texto_calefacciones').hide();
-		$('#texto_calentamiento').hide();
-		$('#texto_circulacion').hide();
-		$('#texto_regulacion').hide();
-		$('#texto_aire').show();
-		$('#td_mostrarCalefactores').removeClass("caracteristicas_funcionamiento_selected_button");
-		$('#td_mostrarCalentamiento').removeClass("caracteristicas_funcionamiento_selected_button");
-		$('#td_mostrarCirculacion').removeClass("caracteristicas_funcionamiento_selected_button");
-		$('#td_mostrarRegulacion').removeClass("caracteristicas_funcionamiento_selected_button");
-		$('#td_mostrarAire').addClass("caracteristicas_funcionamiento_selected_button");
+	$('#aire_show').click(function() {
+		$('#calefacciones_text').hide();
+		$('#calentamiento_text').hide();
+		$('#circulacion_text').hide();
+		$('#regulacion_text').hide();
+		$('#aire_text').show();
+		$('#calefactores_show_td').removeClass("characteristics_functioning_selected_button");
+		$('#calentamiento_show_td').removeClass("characteristics_functioning_selected_button");
+		$('#circulacion_show_td').removeClass("characteristics_functioning_selected_button");
+		$('#regulacion_show_td').removeClass("characteristics_functioning_selected_button");
+		$('#aire_show_td').addClass("characteristics_functioning_selected_button");
 	});
 	
 })
@@ -98,7 +94,7 @@ function currentSlide(n) {
 
 function showSlides(n) {
   var i;
-  var slides = document.getElementsByClassName("caracteristica_slide");
+  var slides = document.getElementsByClassName("characteristic_slide");
   var dots = document.getElementsByClassName("dot");
   if (n > slides.length) {slideIndex = 1}
     if (n < 1) {slideIndex = slides.length}

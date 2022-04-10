@@ -3,14 +3,14 @@ p{
 }
 
 /* Format colaboration container*/
-.colaborations_container{
+.colaborations_container {
 	height: 100%;
 	margin: 1%;
     width: 60%;
 }
 
 /* Format of contact container */
-.contact_container{
+.contact_container {
     background-color: var(light-background);
     border: 5px inset var(--orange);
     border-radius: 15px;
@@ -20,19 +20,19 @@ p{
 }
 
 /* Text alignment of contact form*/
-.contact_container p{
+.contact_container p {
     text-align: center;
 }
 
 /* Contact form aligment and arrangement in columns*/
-.contact_form_container{
+.contact_form_container {
     column-count: 2;
     margin: 0 auto;
     width: 90%;
 }
 
 /*Format of in-text links*/
-.contact_global_link, .privacy_policy_link{
+.contact_global_link, .privacy_policy_link {
 	color: var(--orange);
 	text-decoration: none;
 }
@@ -43,7 +43,7 @@ form li + li {
 }
 
 /*Format of input and textarea fields of contact form*/
-input,textarea{
+input,textarea {
 	border: 1px solid var(--yellow);
 	height: 32px;
 	min-height: 22px;
@@ -58,7 +58,7 @@ input[type="text"],input[type="email"],textarea {
 }
 
 /*Size and alignment of checkbox*/
-input[type="checkbox"]{
+input[type="checkbox"] {
     height: 0;
     margin: 0 auto;
     min-height: 10px;
@@ -81,11 +81,11 @@ label {
 }
 
 /*Minimum height for message field*/
-#message{
+#message {
 	min-height: 150px;
 }
 
-#privacy_policy_label{
+#privacy_policy_label {
     text-align: left;
 }
 
@@ -100,7 +100,7 @@ select {
 }
 
 /*Format of send button of contact form*/
-.send_button{
+.send_button {
 	background-color: var(--orange);
     border: none;
     color: #ffffff;
@@ -113,48 +113,56 @@ select {
 }
 
 /*Subtitle format for contact subtitles*/
-.subtitle5{
+.subtitle5 {
 	font-size: 24px;
     margin: 1% 0; 	
     padding: 0 1%;
 }
 
 /*Size adjustment of support info container */
-.support_info_container{
+.support_info_container {
 	height: 100%;
 	margin: 1%;
     width: 40%;
 }
 
 /*Alignment of text in textarea of contact form*/
-textarea{
+textarea {
 	overflow: auto;
     vertical-align: top;
 }
 
 /*Format and size adjustment for mobile devices*/
 @media (max-width: 768px){
-
-    .colaborations_container,.support_info_container{
+    
+    /*Set width to maximum */
+    .colaborations_container, label,.support_info_container {
         width: 100%;
     }
 
-    .contact_form_container{
-        text-align: center;
+    /*Set number of columns to one of contact form container*/
+    .contact_form_container {
         column-count: 1;
     }
-    
-    .send_button{
+
+    /*Align text to center*/
+    .contact_form_container, label, .subtitle5 {
+        text-align: center;
+    }
+
+    /*Add margin between labels and fields in contact form*/
+    label {
+        margin: 2% auto;
+    }
+
+    /*Set display direction to column*/
+    .main_info_container {
+        flex-direction: column;
+    }
+
+    /*Adjust margin and padding of send button*/
+    .send_button {
         margin: 5%;
         padding: 5% 10%;
-    }
-
-    label {
-        text-align: center;
-        width: 100%;
-    }
-
-    .main_info_container{
-        flex-direction: column;
     }
 }

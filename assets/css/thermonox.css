@@ -1,498 +1,487 @@
-p{
+/*Add space between paragraphs*/
+p {
     padding: 1%;
 }
 
-.aplicaciones_container{
+/*Format for slideshow container in about thermonox page*/
+.about_thermonox_slideshow_container {
+    margin: 0 auto;
+    position: relative;
     width: 100%;
-    display: flex;
-    display: row;
 }
 
-.aplicaciones_info_container{
-    width: 50%;
-    margin: 2%;
-    padding: 4%;
+/*Adding padding for cards in security page*/
+.add-padding {
+    padding: 10%;
+}
+
+/*Column and margin format for advantages list in functioning page*/
+.advantages_list {
+    column-count: 2;
+    margin: 1% auto;
+    width: 90%;
+}
+
+/*Alignment for elements in advantages list in functioning page*/
+.advantages_list li {
+    padding: 1% 3% 0 1%;
+}
+
+/*Check marker format for lists*/
+.advantages_list li::marker,.guarantees_security_list li::marker,.services_list li::marker, .sectors_aplications_list li::marker {
+    content: "\f00c";
+    font-family: "FontAwesome";
+    color: #8cc14c;
+}
+
+/*Title in advantages list in functioning page*/
+.advantages_list_title {
+	font-size: 18px;
+    font-weight: bold;
+    margin-top: 30px;
+    padding: 0;
+}
+
+/*Row format for items in containers*/
+.aplications_container,.characteristics_functioning_slides_container,.guarantees_security_container, .industries_aplications_list, .security_cards_container {
+    display: flex;
+    flex-direction: row;
+}
+
+/*Format for aplications info container */
+.aplications_info_container {
     background-color: var(light-background);
     border: 5px solid var(--orange);
-    box-shadow: 5px 10px 8px rgb(68 68 68 / 50%);
     border-top-right-radius: 400px 50px;
     border-bottom-left-radius: 400px 50px;
+    box-shadow: 5px 10px 8px rgb(68 68 68 / 50%);
+    margin: 2%;
+    padding: 4%;
+    width: 50%;
 }
 
-.box-shadow-format{
+/*Adding orange shadow to container*/
+.box-shadow-format {
     border: 1px solid var(--orange);
     box-shadow: 5px 10px 8px var(--orange);
     text-align: center;
 }
 
-.caracteristicas_funcionamiento_button{
-	font-family: 'Montserrat';
-    font-size: 16px;
+/*Format for buttons of characteristics in functioning page*/
+.characteristics_functioning_button {
     background: none;
     border: none;
+    font-family: 'Montserrat';
+    font-size: 16px;
     margin: 3% 0;
 }
 
-.caracteristicas_funcionamiento_table{
-	text-align: center;
+/*Align elements and text to center of characteristics table in functioning page*/
+.characteristics_functioning_table {
 	justify-content: center;
+    text-align: center;
 }
 
-.caracteristicas_funcionamiento_table td:nth-child(n+2){
+/*Adding border in-between elements in characteristics table in functioning page*/
+.characteristics_functioning_table td:nth-child(n+2) {
     border-left: 1px solid var(--orange);
     padding: 0 0.5% 0 0.5%;
 }
 
-.caracteristicas_funcionamiento_table_text{
+/*Text format for characteristics table in functioning page*/
+.characteristics_functioning_table_text {
+    border-bottom: 1px solid var(--orange);
 	border-top: 1px solid var(--orange);
-	border-bottom: 1px solid var(--orange);
 	height: auto;
 	padding: 2%;
     text-align: center;
 }
 
-.caracteristicas_funcionamiento_selected_button,.caracteristicas_funcionamiento_button:hover{
+/*Adding for background color for selected button and hovering*/
+.characteristics_functioning_selected_button,.characteristics_functioning_button:hover {
 	background-color: rgb(235 91 37 / 60%);
 }
 
-.caracteristica_slide {
+/*Adding format for characteristics slides in mobile devices*/
+.characteristic_slide {
     display: none;
     padding: 5%;
     text-align: center;
     width: 90%;
 }
 
-.caracteristicas_funcionamiento_slides_container {
-    display: flex;
-    display: row;
-}
-
-.caracteristicas_funcionamiento_slideshow_container{
+/*Hidding slideshow of characteristics in desktop devices */
+.characteristics_functioning_slideshow_container {
     display: none;
 }
 
-.division_container{
+/*Dot of format in characteristics slideshow in mobile devices*/
+.dot {
+    background-color:  var(--grey);
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    height: 15px;
+    margin: 0 2px;
+    transition: background-color 0.6s ease;
+    width: 15px;
+}
+
+/*Dot container alignment format*/
+.dot-container {
+    padding: 20px;
+    text-align: center;
+}
+  
+/*Fade animation for slideshows*/
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1s;
+    animation-name: fade;
+    animation-duration: 1s;
+    transition-timing-function: ease-out;
+}
+
+/*Format for prev and next buttons in slideshow in functioning page*/
+.functioning_prev_button, .functioning_next_button {
+    border-radius: 0 3px 3px 0;
+    color: var(--orange);
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    margin: auto 0;
+    padding: 16px;
+    user-select: none;
+    width: 5%;
+}
+ 
+/*Adding hover format for prev and next button in functioning slideshow*/
+.functioning_prev_button:hover, .functioning_next_button:hover {
+    background-color: rgb(245 154 120);
+    color: white;
+}
+
+/*Width of guarantees list in security page*/
+.guarantees_security_list {
+    width: 70%;
+}
+
+/*Adjusting alignment of guarantees list in security page*/
+.guarantees_security_list li {
+	margin: 1% 2.5%;
+	padding: 0 1%;
+}
+
+/*Size of general container for all pages*/
+.general_container {
+    width: 100%;
+    height: auto;
+}
+
+/*Format for titles for all pages*/
+.general_title {
+    color: var(--orange);
+    font-size: 42px;
+    font-weight: 400;
+    margin: 2% 2% 0 2%;
+    padding-top: 3%;
+    text-align: center;
+}
+
+/*Size, format and alignment of info container for all pages*/
+.general_info_container {
+    margin: 0 auto;
+    text-align: justify;
+    width: 90%;
+}
+
+/*Font format for highlighted text*/
+.general_highlighted_text {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/*Format for atex logo in security page*/
+.hero__atex-konform {
+    margin: auto;
+    padding: 0;
+    width: 20%;
+}
+
+/*Color format for atex logo in security page*/
+.hero__atex-konform svg {
+    fill: black;
+}
+
+/*Increase font-size to 20px*/
+.increase_font-size {
+    font-size: 20px;
+}
+
+/*Lower border division container of industries table in aplicactions page*/
+.industries_aplications_division_container {
 	display: flex;
 	flex-direction: row;
 	height: 5px;
 }
 
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color:  var(--grey);
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
 
-.dot-container {
-    text-align: center;
-    padding: 20px;
-}
-  
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-    transition-timing-function: ease-out;
-}
-  
-.funcionamiento_prev, .funcionamiento_next {
-    cursor: pointer;
-    width: 5%;
-    padding: 16px;
-    color: var(--orange);
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    margin: auto 0;
-}
-  
-
-.funcionamiento_next {
-    position: relative;
-    margin-right: auto;
-    border-radius: 3px 0 0 3px;
-}
-  
-.funcionamiento_prev:hover, .funcionamiento_next:hover {
-    background-color: rgb(245 154 120);
-    color: white;
-}
-
-.footer_about{
-    color: white;
-    background-color: var(--brown);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 80px;
-    margin-top: 0;
-}
-
-.garantias_seguridad_container{
-    display: flex;
-    flex-direction: row;
-}
-  
-.garantias_seguridad_list{
-    width: 70%;
-}
-
-.garantias_seguridad_list li{
-	margin: 1% 2.5%;
-	padding: 0 1%;
-}
-
-.garantias_seguridad_list li::marker{
-    content: "\f00c";
-    font-family: "FontAwesome";
-    color: #8cc14c;
-}
-
-.general_container{
-    width: 100%;
-    height: auto;
-}
-  
-.general_title{
-    font-weight: 400;
-    color: var(--orange);
-    text-align: center;
-    font-size: 42px;
-    padding-top: 3%;
-    margin: 2% 2% 0 2%;
-}
-  
-.general_info_container{
-    width: 90%;
-    text-align: justify;
-    margin: 0 auto;
-}
-  
-.general_highlighted_text{
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.hero__atex-konform{
-    width: 20%;
-    padding: 0;
-    margin: auto;
-}
-
-.hero__atex-konform svg{
-    fill: black;
-}
-
-.industrias_aplicaciones_table{
-	display: flex;
-	flex-direction: row;
-}
-
-.industrias_aplicaciones_table_columns{
-	width: 33%;
-	text-align: center;
+/*Alignment and size adjustment for columns of industries table in aplications page*/
+.industries_aplications_list li{
 	align-items: center;
-}
-
-.industrias_aplicaciones_table_title{
-	font-size: 22px;
-	padding: 5% 2.5% 2% 2.5%;
-	margin: 0 5%;
-	border-top: 2px solid var(--orange);
-	text-align: center;
-}
-
-
-.industrias_aplicaciones_table_text{
-	padding: 4% 2.5% 2% 2.5%;
-	margin: 0 5%;
-	text-align: center;
-}
-
-.industrias_aplicaciones_division{
-	margin: 0 2.5%;
-    border-bottom: 2px solid var(--orange);
+    text-align: center;
     width: 33%;
 }
-  
+
+/*Title format of columns of industries table in aplications page*/
+.industries_aplications_list_title {
+	border-top: 2px solid var(--orange);
+    font-size: 22px;
+	margin: 0 5%;
+	padding: 5% 2.5% 2% 2.5%;
+	text-align: center;
+}
+
+/*Text format of columns of industries table in aplications page*/
+.industries_aplications_list_text {
+	margin: 0 5%;
+    padding: 4% 2.5% 2% 2.5%;
+	text-align: center;
+}
+
+/*Lower border format of industries table in aplicactions page*/
+.industries_aplications_division {
+    border-bottom: 2px solid var(--orange);
+    margin: 0 2.5%;
+    width: 33%;
+}
+
+/*Fade effect for slideshow transition*/
 @keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
 }
 
-.limitaciones_aplicaciones_list{
-	margin: 0 auto 2% auto;
+/*Adjusting bottom margin of limitations list in aplications page*/
+.limitations_aplications_list {
+	margin-bottom: 2%;
 }
 
-.limitaciones_aplicaciones_list li:nth-child(n+2){
-	border-top: 1px solid #dddddd;
+/*Adding border in-between elements in limitations list in aplications page*/
+.limitations_aplications_list li:nth-child(n+2) {
+	border-top: 1px solid rgb(235 91 37 / 40%);
     padding-top: 3%;
 }
 
-.limitaciones_aplicaciones_list li{
+/*Adjusting margin and padding of limitations list in aplications page*/
+.limitations_aplications_list li {
 	margin: 4%;
     padding: 0 1%;
 }
 
-.limitaciones_aplicaciones_list li::marker{
-	content: "\f00d";
+/*Times marker format for list*/
+.limitations_aplications_list li::marker {
+	color: var(--orange);
+    content: "\f00d";
     font-family: "FontAwesome";
-    color: var(--orange);
 }
 
-
-.main_info_container{
-    height: auto;
-    width: 90%; 
-    margin: 0 auto;
+/*General format for main container in all pages*/
+.main_info_container {
     display: flex;
     flex-direction:row;
+    height: auto;
+    margin: 0 auto;
     padding-top: 1%;
-}
-  
-.principal_img_container{
-    width: 100%;
-    height: 480px;
-    background-image: url("../images/acercaThermonox/m-h-hofmeir-pano.jpg");
-    background-position: 50% -57.7575px;
+    width: 90%; 
 }
 
-.sectores_aplicaciones_list li{
+/*Container for principal image in about thermonox page*/ 
+.principal_img_container {
+    background-image: url("../images/acercaThermonox/m-h-hofmeir-pano.jpg");
+    background-position: 50% -57.7575px;
+    height: 480px;
+    width: 100%;
+}
+
+/*Adjusting alignment of sectors list in aplications page*/
+.sectors_aplications_list li {
 	margin: 1% 4%;
 	padding: 0 1%;
 }
 
-.sectores_aplicaciones_list li::marker{
-    content: "\f00c";
-    font-family: "FontAwesome";
-    color: #8cc14c;
-}
-
-.seguridad_thermonox_padding{
-    padding: 10%;
-}
-
-.seguridad_thermonox_container{
-    display: flex;
-    flex-direction: row;
-}
-
-#seguridad_thermonox_font-size{
-    font-size: 18px;
-}
-
-.seguridad_thermonox_info_container{
-    margin: 2%;
-    width: 33%;
-    background-color: rgb(68 68 68 / 20%);
+/*Format for cards of security page */
+.security_cards_info_container {
     background-color: rgb(250 185 0 / 70%);
     box-shadow: 5px 10px 8px var(--grey);
+    margin: 2%;
+    width: 33%;
 }
 
-.services_list{
+/*Title format for cards of security page*/
+.security_cards_title {
+    background-color: rgb(235 91 37 / 85%);
+    font-size: 20px;
     font-weight: bold;
-    width: 90%;
-    margin: 1% auto 3% auto;
+    margin: 0;
+    padding: 5%;
+    text-align: center;
 }
-  
-.services_list li{
+
+/*Format for services list in about thermonox page*/
+.services_list {
+    font-weight: bold;
+    margin: 1% auto 3% auto;
+    width: 90%;
+}
+
+/*Alignment for element in services list in about thermonox page*/
+.services_list li {
     margin: 2%;
     padding-left: 1%;
 }
-  
-.services_list li::marker{
-    content: "\f00c";
-    font-family: "FontAwesome";
-    color: #8cc14c;
-}
 
-.slideshow_image{
+/*Format for image in slideshow in about thermonox page*/
+.slideshow_image {
+    display: block;
     height: auto;
     width: 100%;
-    display: block;
 }
-  
-.slideshow_images{
+
+/*Format for image container in slideshow in about thermonox page*/
+.slideshow_image_container {
     display: none;
     height: 100%;
-  
 }
-  
+
+/*Format for titles in slideshow in functioning page*/
 .slide_title {
     color: var(--orange);
-    text-align: center;
     font-size: 22spx;
+    text-align: center;
 }
 
-
-.subtitle1{
-	font-size: 20px;
-	margin: 1% 0;
-}
-
-.subtitle2{
+/*1st format for subtitles*/
+.subtitle1 {
 	font-size: 25px;
+    font-weight: bold;
 	margin: 2% 0 5% 0;
 	padding: 0 1%;
     text-align: center;
-    font-weight: bold;
-}
+} 
 
-.subtitle3{
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    background-color: rgb(235 91 37 / 85%);
-    padding: 5%;
-    margin: 0;
-}
-  
-
-.thermonox_prev, .thermonox_next {
+/*Format for prev and next buttons in slideshow in about thermonox page*/
+.about_thermonox_prev_button, .about_thermonox_next_button {
+    border-radius: 0 3px 3px 0;
+    color: white;
     cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
+    font-size: 18px;
+    font-weight: bold;
     margin-top: -22px;
     padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
+    position: absolute;
+    top: 50%;
     transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
     user-select: none;
+    width: auto;
 }
-  
-.thermonox_next {
-    right: 0;
+
+/*Right alignment for next button in slideshow in about thermonox page*/
+.about_thermonox_next_button {
     border-radius: 3px 0 0 3px;
+    right: 0;   
 }
-  
-.thermonox_prev:hover, .thermonox_next:hover {
+
+/*Adding for background color for hovering*/
+.about_thermonox_prev_button:hover, .about_thermonox_next_button:hover {
     background-color: rgba(0,0,0,0.8);
 }
 
-.thermonox_slideshow_container{
-    position: relative;
-    margin: 0 auto 0 auto;
-    width: 100%;
-    
+/*Remove top margin of footer*/
+.top_margin_remove {
+    margin-top: 0;
 }
 
-.ventajas_list{
-    width: 90%;
-    margin: 1% auto 3% auto;
-    column-count: 2;
-}
-
-.ventajas_list li{
-    padding-left: 1%;
-    padding-right: 3%;
-}
-
-.ventajas_list li::marker{
-    content: "\f00c";
-    font-family: "FontAwesome";
-    color: #8cc14c;
-}
-
-.ventajas_list_title{
-	font-size: 18px;
-    font-weight: bold;
-    padding: 0;
-    margin-top: 30px;
-}
-
-.wide_button{
+/*Increase button width*/
+.wide_button {
     width: 30%;
 }
-    
+
+/*Background color for active and dot hovering in slideshow */    
 .active, .dot:hover {
     background-color: var(--orange);
 }
 
+/*Format and size adjustment for mobile devices*/
 @media(max-width: 768px){
-    p{
-        margin: 2%;
+    /*Increase space between paragraphs*/
+    p {
+        padding: 2%;
     }
 
-    .aplicaciones_container, .industrias_aplicaciones_table, .sectores_aplicaciones_list{
+    /*Set display direction to column*/
+    .aplications_container,.guarantees_security_container, .industries_aplications_list, .sectors_aplications_list,.security_cards_container {
 		flex-direction: column;
 	}
 
-    .caracteristicas_funcionamiento_container{
+    /*Adjust padding of aplications info container*/
+    .aplications_info_container {
+        padding: 10%;
+    }
+
+    /*Set width to maximum */
+    .aplications_info_container,.guarantees_security_list,.hero__atex-konform,.industries_aplications_list li,.security_cards_info_container {
+        width: 100%;
+    }
+
+    /*Hidde elements */
+    .characteristics_functioning_container,.industries_aplications_division_container {
         display: none;
     }
 
-    .caracteristicas_funcionamiento_slideshow_container{
+    /*Show elements*/
+    .characteristics_functioning_slideshow_container {
         display: block;
     }
 
-    .division_container{
-		display: none;
-	}
-
-    .garantias_seguridad_container{
-        flex-direction: column;
-    }
-
-    .general_highlighted_text{
+    /*Align text to center*/
+    .general_highlighted_text {
         text-align: center;
     }
 
-    .general_title{
+    /*Adjust margin and reduce font-size of general title*/
+    .general_title {
         margin-top: 8%;
         font-size: 36px;
     }
 
-    .garantias_seguridad_list,.hero__atex-konform,.industrias_aplicaciones_table_columns{
-        width: 100%;
+    /*Add top margin to atex logo */
+    .hero__atex-konform {
+        margin-top: 20px;
     }
 
-    .hero__atex-konform{
-        margin: 20px auto;
-    }
-
-    .hero__atex-konform svg{
-        fill: black;
-    }
-
-    .industrias_aplicaciones_table_text{
-		border-bottom: 1px solid var(--orange);
-	}
-
-	.industrias_aplicaciones_table_title{
+    /*Remove top border and adjust padding of title on list in aplications page*/
+	.industries_aplications_list_title {
 		border-top: none;
-		padding: 3% 2.5% 2% 2.5%;
+		padding: 3% 2.5% 3% 2.5%;
 	}
-
-    .aplicaciones_info_container{
-		width: 100%;
-        padding: 10%;
+    
+    /*Add bottom border to element on list in aplications page*/
+    .industries_aplications_list li{
+        border-bottom: 2px solid var(--orange);
     }
-
-    .seguridad_thermonox_container{
-        flex-direction: column;
-    }
-
-    .seguridad_thermonox_info_container{
-        width: 100%;
+    /*Adjust margin cards in security page*/
+    .security_cards_info_container {
         margin: 5% 0;
     }
 
-    .subtitle2{
-        margin: 5%;
+    /*Add top margin to subtitle1*/
+    .subtitle1 {
+        margin-top: 5%;
 	}
 
-    .ventajas_list{
+    /*Set number of columns to one of advantages list in functioning page*/
+    .advantages_list {
         column-count: 1;
     }
 
