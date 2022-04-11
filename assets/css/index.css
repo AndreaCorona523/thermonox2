@@ -171,7 +171,7 @@ ul{
     color: var(--yellow);
 }
 
-@media (min-width: 768px){
+@media (min-width: 1024px){
     body{
         transition: none;
     }
@@ -269,6 +269,12 @@ ul{
         padding: 5px;
     }
 
+    .language_menu:active .language_menu__dropdown{
+        height: auto;
+        opacity: 1;
+        padding: 5px;
+    }
+
     .language_menu__option a{
         color: var(--grey);
         display: flex;
@@ -338,6 +344,12 @@ ul{
         padding: 15px 0;
     }
 
+    .navbar__item:active > .navbar__dropdown{
+        height: auto;
+        opacity: 1;
+        padding: 15px 0;
+    }
+
     .offcanvas{
         display: none;
     }
@@ -353,9 +365,6 @@ ul{
         cursor: pointer;
     }
 
-}
-
-@media (min-width: 1024px){
     .header, .language_container{
         max-width: 1130px;
     }
