@@ -22,10 +22,11 @@
     max-width: 500px;
 }
 
-.call__title{
-    color: var(--orange);
-    font-weight: 400;
-    margin-top: 3%;
+.call_border {
+    background-color: var(light-background);
+    border: 5px solid var(--orange);
+    box-shadow: 5px 10px 8px rgb(68 68 68 / 50%);
+
 }
 
 .call__button{
@@ -39,6 +40,12 @@
 
 .call__button:active{
     transform: scale(0.95);
+}
+
+.call__title{
+    color: var(--orange);
+    font-weight: 400;
+    margin-top: 3%;
 }
 
 .call__video{
