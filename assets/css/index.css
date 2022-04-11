@@ -2,17 +2,20 @@
 @import './icons.css';
 @import './root.css';
 
+/* Sets margin and padding to 0 and sets box-sizing to border-box */
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+/* Adjusts the height of the html element and sets the background color to --brown for the offcanvas_menu animation */
 html{
     height: 100%;
     background-color: var(--brown);
 }
 
+/* Sets font, size and display properties to the body, in order to achive the the proper offcanvas_menu funtionality */
 body{
     display: flex;
     flex-direction: column;
@@ -25,12 +28,15 @@ body{
     transition: transform 0.5s ease;
 }
 
+/* Sets styles fot the body for when the mobile menu is activated */
+/* Also disables interation with other parts of the body when the menu is activated */
 .body--offcanvas{
     transform: translateX(270px);
     overflow: hidden;
     height: 100vh;
 }
 
+/* Darkens the body when the mobile menu is activated */
 .cover{
     display: none;
     position: absolute;
@@ -42,20 +48,24 @@ body{
     z-index: 1;
 }
 
+/* Displays the cover element when the mobile menu is activated */
 .cover--show{
     display: block;
 }
 
+/* Removes bullets from any ul */
 ul{
     list-style: none;
 }
 
+/* Sets colors and padding to the header */
 .header_container{
     background-color: var(--orange);
     padding: 0 25px;
     position: relative;
 }
 
+/* Adds the diagonal line below the header */
 .header_container::after {
     content: "";
     position: absolute;
@@ -68,6 +78,7 @@ ul{
     height: calc(30% + 5px);
 }
 
+/* Sets display and layout properties of the header container */
 .header{
     display: flex;
     justify-content: center;
@@ -75,6 +86,7 @@ ul{
     position: relative;
 }
 
+/* Sets the size of the header logo */
 .header__logo{
     width: 100%;
 }
@@ -86,10 +98,12 @@ ul{
     padding: 5px 0;
 }
 
+/* Sets language container display to none in mobile version */
 .language_container{
     display: none;
 }
 
+/* Sets display properties for a main element */
 .main{
     display: flex;
     justify-content: center;
@@ -98,6 +112,7 @@ ul{
     flex-grow: 1;
 }
 
+/* Sets color and size for the mobile menu icon */
 .menu-icon{
     color: white;
     font-size: 32px;
@@ -105,10 +120,12 @@ ul{
     left: 0;
 }
 
+/* Sets navbar display to none in mobile version */
 .navbar{
     display: none;
 }
 
+/* Sets the position and style properties for the mobile menu container */
 .offcanvas{
     display: none;
     color: white;
@@ -122,17 +139,20 @@ ul{
     z-index: 11;
 }
 
+/* Displays the mobile menu when it is activated */
 .offcanvas--show{
     height: 100vh;
     display: block;
 }
 
+/* Styles the links in the mobile menu */
 .offcanvas a{
     display: block;
     color: white;
     text-decoration: none;
 }
 
+/* Styles the language section container in the mobile menu */
 .offcanvas_language{
     display: flex;
     flex-wrap: wrap;
@@ -146,41 +166,51 @@ ul{
     height: 32px;
 }
 
+/* Styles the links for the main website sections in the mobile menu */
 .offcanvas_nav__item > a{
     padding: 10px 15px;
 }
 
+/* Styles the links for the current website section in the mobile menu */
 .offcanvas_nav__item--selected > a{
     color: var(--yellow);
 }
 
+/* Styles the container for the subsections links in the mobile menu */
 .offcanvas_subnav{
     padding: 5px 0;
 }
 
+/* Styles the links for the website subsections in the mobile menu */
 .offcanvas_subnav__item > a{
     padding: 2px 20px;
 }
 
+/* Changes color to white when you hover over a link in the mobile menu */
 .offcanvas_nav__item > a:hover,.offcanvas_subnav__item > a:hover{
     color: white;
     background-color: var(--orange);
 }
 
+/* Styles the links for the current website subsection in the mobile menu */
 .offcanvas_subnav__item--selected > a{
     color: var(--yellow);
 }
 
+/* Styles for laptops and larger devices */
 @media (min-width: 1024px){
+    /* Removes the mobile menu animation */
     body{
         transition: none;
     }
 
+    /* Disables the mobile menu */
     .body--offcanvas{
         transform: none;
         overflow: auto;
     }
 
+    /* Displays contact info at the top of the header */
     .contact{
         display: flex;
         gap: 1rem;
@@ -195,10 +225,12 @@ ul{
         text-decoration: none;
     }
 
+    /* Disables the mobile menu cover */
     .cover--show{
         display: none;
     }
 
+    /* Styles the nabvar drowpdown menu elements */
     .dropdown__option > a{
         display: flex;
         padding: 5px 20px;
@@ -214,16 +246,19 @@ ul{
         background-color: var(--orange);
     }
 
+    /* Sets size and color for the language menu icon */
     .globe-icon {
         color: white;
         font-size: 24px;
     }
 
+    /* Sets a max width for the header an language sections */
     .header, .language_container{
         margin: auto;
-        max-width: 930px;
+        max-width: 1130px;
     }
 
+    /* Sets layout properties of the header */
     .header{
         justify-content: space-between;
         align-items: flex-end;
@@ -231,27 +266,32 @@ ul{
         padding-bottom: 20px;
     }
 
+    /* Sets header logo size */
     .header__logo_container{
         padding: 0;
         width: 40%;
         max-width: 400px;
     }
 
+    /* Sets language display properties */
     .language_container{
         display: flex;
         justify-content: flex-end;
     }
 
+    /* Sets language icon container properies */
     .language_icon{
         background-color: var(--yellow);
         display: flex;
         padding: 1px 12px;
     }
 
+    /* Sets the language menu position and limits its children width */
     .language_menu{
         position: relative;
     }
 
+    /* Sets styles for the language dropdown menu */
     .language_menu__dropdown{
         height: 0;
         opacity: 0;
@@ -263,18 +303,21 @@ ul{
         transition: opacity 0.2s ease-in;
     }
 
+    /* Displays the language dropdown menu on hover */
     .language_menu:hover .language_menu__dropdown{
         height: auto;
         opacity: 1;
         padding: 5px;
     }
 
+    /* Displays the language dropdown menu on active */
     .language_menu:active .language_menu__dropdown{
         height: auto;
         opacity: 1;
         padding: 5px;
     }
 
+    /* Sets styles for the language links */
     .language_menu__option a{
         color: var(--grey);
         display: flex;
@@ -282,20 +325,24 @@ ul{
         text-decoration: none;
     }
 
+    /* Changes language links color on hover */
     .language_menu__option a:hover{
         color: white;
         background-color: var(--orange);
     }
 
+    /* Displays selected language */
     .language_menu__select{
         display: flex;
         align-items: stretch;
     }
     
+    /* Removes mobile menu icon */
     .menu-icon{
         display: none;
     }
 
+    /* Sets navbar display and layout properties */
     .navbar{
         font-size: 18px;
         display: flex;
@@ -303,6 +350,7 @@ ul{
         flex-wrap: wrap;
     }
 
+    /* Sets styles and animation for the navbar dropdown menus */
     .navbar__dropdown{
         height: 0;
         overflow: hidden;
@@ -317,43 +365,52 @@ ul{
         z-index: 1;
     }
 
+    /* Sets nabvar item postion and limits its childs width */
     .navbar__item{
         position: relative;
     }
 
+    /* Stiles the navbar main links */
     .navbar__item > a{
         text-decoration: none;
         color: var(--yellow);
     }
 
+    /* Styles current section link */
     .navbar__item--selected > a{
         color: white;
     }
     
+    /* Changes dropdown menu links color on hover */
     .navbar__item a:hover{
         color: white;
     }
 
+    /* Changes main links color on hover */
     .navbar__item:hover > a{
         color: var(--grey);
     }
 
+    /* Displays dropdown menu on hover */
     .navbar__item:hover > .navbar__dropdown{
         height: auto;
         opacity: 1;
         padding: 15px 0;
     }
 
+    /* Displays dropdown menu on active */
     .navbar__item:active > .navbar__dropdown{
         height: auto;
         opacity: 1;
         padding: 15px 0;
     }
 
+    /* Disables mobile menu */
     .offcanvas{
         display: none;
     }
 
+    /* Sets display properties for the selected language container */
     .selected_language{
         background-color: var(--dropdown-background);
         display: flex;
@@ -361,11 +418,8 @@ ul{
         padding: 0 12px;
     }
 
+    /* Sets the cursor to pointer when you hover over the language menu */
     .selected_language:hover{
         cursor: pointer;
-    }
-
-    .header, .language_container{
-        max-width: 1130px;
     }
 }
