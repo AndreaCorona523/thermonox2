@@ -1,45 +1,45 @@
 /* Sets styles for a break line div and sets it to display none in mobile*/
 .break-line{
     background-color: var(--orange);
-    width: 100%;
-    height: 2px;
     display: none;
+    height: 2px;
     margin: 1.5rem 0;
+    width: 100%;
 }
 
 /* Sets padding and font-size for the "calls" section container */
 .calls{
-    padding: 2rem;
     font-size: 1.125rem;
+    padding: 2rem;
 }
 
 /* Sets the styles for the "call" component */
 .call{
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
     gap: 1.5rem;
-    text-align: center;
+    justify-content: space-between;
     max-width: 500px;
+    text-align: center;
 }
 
 /* Sets styles for a container that adds a border to the "call" component */
 .call_border {
-    padding: 0 1rem;
     background-color: var(light-background);
     border: 5px solid var(--orange);
     box-shadow: 5px 10px 8px rgb(68 68 68 / 50%);
+    padding: 0 1rem;
 }
 
 /* Sets styles for the element "button" inside a "call" component */
 .call__button{
+    background-color: var(--orange);
     color: white;
     display: block;
-    background-color: var(--orange);
+    margin-bottom: 1rem;
     padding: 0.3rem 0.8rem;
     text-decoration: none;
-    margin-bottom: 1rem;
 }
 
 /* Sets styles for the "button" element when it is pressed */
@@ -56,28 +56,28 @@
 
 /* Sets width and margin of the "video" element of the "call" component*/
 .call__video{
-    width: 100%;
     margin: 1rem;
+    width: 100%;
 }
 
 /* Wraps the "call" components in a flex container to adjust layout */
 .calls__wrapper{
-    display: flex;
-    justify-content: center;
     align-items: stretch;
+    display: flex;
     flex-wrap: wrap;
     gap: 0 2rem;
+    justify-content: center;
     margin-top: 1.5rem;
 }
 
 /* Sets styles for the "footer" section container */
 .footer{
-    color: white;
+    align-items: center;
     background-color: var(--brown);
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
     min-height: 80px;
 }
 
@@ -85,18 +85,18 @@
 .footer__item{
     color: white;
     display: block;
-    text-decoration: none;
     padding: 1.5rem;
+    text-decoration: none;
 }
 
 /* Sets background-color and display properties to the "hero" section container */
 .hero{
     background-color: var(--yellow);
     color: white;
-    padding: 5rem 1.5rem 0 1.5rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    padding: 5rem 1.5rem 0 1.5rem;
 }
 
 /* Sets styles for the "title" element in the "hero" container */
@@ -107,17 +107,17 @@
 
 /* Sets display properties to the main container inside the hero */
 .hero__main_container{
+    align-items: center;
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
-    align-items: center;
 }
 
 /* Sets size for the hero image container */
 .hero__image_container{
-    max-width: 100%;
     display: flex;
     justify-self: flex-end;
+    max-width: 100%;
 }
 
 .hero__image_container img{
@@ -139,12 +139,12 @@
 
 /* Sets size and postion for the atex-konform svg */
 .hero__atex-konform{
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    font-size: 1.5rem;
     gap: 1.5rem;
     padding: 2rem 0;
-    font-size: 1.5rem;
 }
 
 .hero__atex-konform svg{
@@ -184,7 +184,7 @@
 
     /* Changes the layout of the hero elements */
     .hero__main_container{
-        flex-direction: row;
         align-items: stretch;
+        flex-direction: row;
     }
 }

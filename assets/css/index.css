@@ -4,25 +4,25 @@
 
 /* Sets margin and padding to 0 and sets box-sizing to border-box */
 *{
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 /* Adjusts the height of the html element and sets the background color to --brown for the offcanvas_menu animation */
-html{
-    height: 100%;
+html {
     background-color: var(--brown);
+    height: 100%;
 }
 
 /* Sets font, size and display properties to the body, in order to achive the the proper offcanvas_menu funtionality */
-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+body {
     background-color: white;
     color: var(--grey);
+    display: flex;
+    flex-direction: column;
     font-family: 'Montserrat';
+    justify-content: space-between;
     min-height: 100%;
     overflow-x: hidden;
     transition: transform 0.5s ease;
@@ -30,36 +30,31 @@ body{
 
 /* Sets styles fot the body for when the mobile menu is activated */
 /* Also disables interation with other parts of the body when the menu is activated */
-.body--offcanvas{
-    transform: translateX(270px);
-    overflow: hidden;
+.body--offcanvas {
     height: 100vh;
+    overflow: hidden;
+    transform: translateX(270px);
 }
 
 /* Darkens the body when the mobile menu is activated */
-.cover{
-    display: none;
-    position: absolute;
+.cover {
     background-color: var(--grey);
-    opacity: .1;
+    display: none;
     height: 100%;
     min-height: 100vh;
+    opacity: .1;
+    position: absolute;
     width: 100vw;
     z-index: 1;
 }
 
 /* Displays the cover element when the mobile menu is activated */
-.cover--show{
+.cover--show {
     display: block;
 }
 
-/* Removes bullets from any ul */
-ul{
-    list-style: none;
-}
-
 /* Sets colors and padding to the header */
-.header_container{
+.header_container {
     background-color: var(--orange);
     padding: 0 25px;
     position: relative;
@@ -67,183 +62,188 @@ ul{
 
 /* Adds the diagonal line below the header */
 .header_container::after {
-    content: "";
-    position: absolute;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 5px, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 5px, 0 100%);
     background-color: var(--orange);
-    left: 0;
-    top: calc(100% - 5px);
-    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 5px, 0 100%);
+    content: "";
     height: calc(30% + 5px);
+    left: 0;
+    position: absolute;
+    top: calc(100% - 5px);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 5px, 0 100%);
+    width: 100%;
 }
 
 /* Sets display and layout properties of the header container */
-.header{
+.header {
+    align-items: center;
     display: flex;
     justify-content: center;
-    align-items: center;
     position: relative;
 }
 
 /* Sets the size of the header logo */
-.header__logo{
+.header__logo {
     width: 100%;
 }
 
-.header__logo_container{
+.header__logo_container {
     display: block;
-    width: 280px;
     max-width: 65%;
     padding: 5px 0;
+    width: 280px;
 }
 
 /* Sets language container display to none in mobile version */
-.language_container{
+.language_container {
     display: none;
 }
 
 /* Sets display properties for a main element */
-.main{
-    display: flex;
-    justify-content: center;
+.main {
     align-items: center;
-    font-size: 3rem;
+    display: flex;
     flex-grow: 1;
+    font-size: 3rem;
+    justify-content: center;    
 }
 
 /* Sets color and size for the mobile menu icon */
-.menu-icon{
+.menu-icon {
     color: white;
     font-size: 32px;
-    position: absolute;
     left: 0;
+    position: absolute;
 }
 
 /* Sets navbar display to none in mobile version */
-.navbar{
+.navbar {
     display: none;
 }
 
 /* Sets the position and style properties for the mobile menu container */
-.offcanvas{
-    display: none;
-    color: white;
-    position: absolute;
-    left: -270px;
+.offcanvas {
     background-color: var(--brown);
+    color: white;
+    display: none;
     height: 0;
-    width: 270px;
-    overflow: auto;
+    left: -270px;
     line-height: 22px;
+    overflow: auto;
+    position: absolute;
+    width: 270px;
     z-index: 11;
 }
 
 /* Displays the mobile menu when it is activated */
-.offcanvas--show{
-    height: 100vh;
+.offcanvas--show {
     display: block;
+    height: 100vh;
 }
 
 /* Styles the links in the mobile menu */
-.offcanvas a{
-    display: block;
+.offcanvas a {
     color: white;
+    display: block;
     text-decoration: none;
 }
 
 /* Styles the language section container in the mobile menu */
-.offcanvas_language{
+.offcanvas_language {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
     padding: 20px 34px;
 }
 
-.offcanvas_language__item{
-    display: flex;
+.offcanvas_language__item {
     align-items: flex-end;
+    display: flex;
     height: 32px;
 }
 
 /* Styles the links for the main website sections in the mobile menu */
-.offcanvas_nav__item > a{
+.offcanvas_nav__item > a {
     padding: 10px 15px;
 }
 
 /* Styles the links for the current website section in the mobile menu */
-.offcanvas_nav__item--selected > a{
+.offcanvas_nav__item--selected > a {
     color: var(--yellow);
 }
 
 /* Styles the container for the subsections links in the mobile menu */
-.offcanvas_subnav{
+.offcanvas_subnav {
     padding: 5px 0;
 }
 
 /* Styles the links for the website subsections in the mobile menu */
-.offcanvas_subnav__item > a{
+.offcanvas_subnav__item > a {
     padding: 2px 20px;
 }
 
 /* Changes color to white when you hover over a link in the mobile menu */
-.offcanvas_nav__item > a:hover,.offcanvas_subnav__item > a:hover{
-    color: white;
+.offcanvas_nav__item > a:hover,.offcanvas_subnav__item > a:hover {
     background-color: var(--orange);
+    color: white;
 }
 
 /* Styles the links for the current website subsection in the mobile menu */
-.offcanvas_subnav__item--selected > a{
+.offcanvas_subnav__item--selected > a {
     color: var(--yellow);
 }
 
+/* Removes bullets from any ul */
+ul {
+    list-style: none;
+}
+
 /* Styles for laptops and larger devices */
-@media (min-width: 1024px){
+@media (min-width: 1024px) {
     /* Removes the mobile menu animation */
-    body{
+    body {
         transition: none;
     }
 
     /* Disables the mobile menu */
-    .body--offcanvas{
-        transform: none;
+    .body--offcanvas {
         overflow: auto;
+        transform: none;
     }
 
     /* Displays contact info at the top of the header */
-    .contact{
-        display: flex;
-        gap: 1rem;
-        font-size: 18px;
+    .contact {
         align-items: center;
+        display: flex;
+        font-size: 18px;
+        gap: 1rem;
         justify-self: center;
         padding: 0 2rem;
     }
 
-    .contact__item{
+    .contact__item {
         color: white;
         text-decoration: none;
     }
 
     /* Disables the mobile menu cover */
-    .cover--show{
+    .cover--show {
         display: none;
     }
 
     /* Styles the nabvar drowpdown menu elements */
-    .dropdown__option > a{
+    .dropdown__option > a {
+        color: var(--grey);
         display: flex;
         padding: 5px 20px;
-        color: var(--grey);
         text-decoration: none;
     }
 
     .dropdown__option > a:hover{
+        background-color: var(--orange);
+        color: white;
         display: flex;
         padding: 5px 20px;
-        color: white;
         text-decoration: none;
-        background-color: var(--orange);
     }
 
     /* Sets size and color for the language menu icon */
@@ -253,72 +253,72 @@ ul{
     }
 
     /* Sets a max width for the header an language sections */
-    .header, .language_container{
+    .header, .language_container {
         margin: auto;
         max-width: 1130px;
     }
 
     /* Sets layout properties of the header */
-    .header{
-        justify-content: space-between;
+    .header {
         align-items: flex-end;
         gap: 20px;
+        justify-content: space-between;
         padding-bottom: 20px;
     }
 
     /* Sets header logo size */
-    .header__logo_container{
+    .header__logo_container {
+        max-width: 400px;
         padding: 0;
         width: 40%;
-        max-width: 400px;
     }
 
     /* Sets language display properties */
-    .language_container{
+    .language_container {
         display: flex;
         justify-content: flex-end;
     }
 
     /* Sets language icon container properies */
-    .language_icon{
+    .language_icon {
         background-color: var(--yellow);
         display: flex;
         padding: 1px 12px;
     }
 
     /* Sets the language menu position and limits its children width */
-    .language_menu{
+    .language_menu {
         position: relative;
     }
 
     /* Sets styles for the language dropdown menu */
-    .language_menu__dropdown{
+    .language_menu__dropdown {
+        background-color: var(--light-background);
         height: 0;
         opacity: 0;
         overflow: hidden;
-        width: 100%;
-        background-color: var(--light-background);
         position: absolute;
-        z-index: 1;
         transition: opacity 0.2s ease-in;
+        width: 100%;
+        z-index: 1;
     }
 
     /* Displays the language dropdown menu on hover */
-    .language_menu:hover .language_menu__dropdown{
+    .language_menu:hover .language_menu__dropdown {
         height: auto;
         opacity: 1;
         padding: 5px;
     }
 
     /* Displays the language dropdown menu on active */
-    .language_menu:active .language_menu__dropdown{
+    .language_menu:active .language_menu__dropdown {
         height: auto;
         opacity: 1;
         padding: 5px;
     }
 
     /* Sets styles for the language links */
-    .language_menu__option a{
+    .language_menu__option a {
         color: var(--grey);
         display: flex;
         padding: 5px 20px;
@@ -326,100 +326,100 @@ ul{
     }
 
     /* Changes language links color on hover */
-    .language_menu__option a:hover{
-        color: white;
+    .language_menu__option a:hover {
         background-color: var(--orange);
+        color: white;
     }
 
     /* Displays selected language */
-    .language_menu__select{
-        display: flex;
+    .language_menu__select {
         align-items: stretch;
+        display: flex;
     }
     
     /* Removes mobile menu icon */
-    .menu-icon{
+    .menu-icon {
         display: none;
     }
 
     /* Sets navbar display and layout properties */
-    .navbar{
-        font-size: 18px;
+    .navbar {
         display: flex;
-        gap: 0 3rem;
         flex-wrap: wrap;
+        font-size: 18px;
+        gap: 0 3rem;
     }
 
     /* Sets styles and animation for the navbar dropdown menus */
-    .navbar__dropdown{
+    .navbar__dropdown {
+        background-color: var(--dropdown-background);
+        border-radius: 5px;
+        font-size: 16px;
         height: 0;
+        left: -20px;
         overflow: hidden;
         opacity: 0;
-        width: 11.5rem;
         position: absolute;
-        left: -20px;
-        font-size: 16px;
-        border-radius: 5px;
-        background-color: var(--dropdown-background);
         transition: opacity 0.2s ease-in;
+        width: 11.5rem;
         z-index: 1;
     }
 
     /* Sets nabvar item postion and limits its childs width */
-    .navbar__item{
+    .navbar__item {
         position: relative;
     }
 
-    /* Stiles the navbar main links */
-    .navbar__item > a{
-        text-decoration: none;
+    /* Styles the navbar main links */
+    .navbar__item > a {
         color: var(--yellow);
+        text-decoration: none;   
     }
 
     /* Styles current section link */
-    .navbar__item--selected > a{
+    .navbar__item--selected > a {
         color: white;
     }
     
     /* Changes dropdown menu links color on hover */
-    .navbar__item a:hover{
+    .navbar__item a:hover {
         color: white;
     }
 
     /* Changes main links color on hover */
-    .navbar__item:hover > a{
+    .navbar__item:hover > a {
         color: var(--grey);
     }
 
     /* Displays dropdown menu on hover */
-    .navbar__item:hover > .navbar__dropdown{
+    .navbar__item:hover > .navbar__dropdown {
         height: auto;
         opacity: 1;
         padding: 15px 0;
     }
 
     /* Displays dropdown menu on active */
-    .navbar__item:active > .navbar__dropdown{
+    .navbar__item:active > .navbar__dropdown {
         height: auto;
         opacity: 1;
         padding: 15px 0;
     }
 
     /* Disables mobile menu */
-    .offcanvas{
+    .offcanvas {
         display: none;
     }
 
     /* Sets display properties for the selected language container */
-    .selected_language{
+    .selected_language {
+        align-items: center;
         background-color: var(--dropdown-background);
         display: flex;
-        align-items: center;
         padding: 0 12px;
     }
 
     /* Sets the cursor to pointer when you hover over the language menu */
-    .selected_language:hover{
+    .selected_language:hover {
         cursor: pointer;
     }
 }
