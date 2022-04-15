@@ -1,22 +1,25 @@
+const form = document.getElementById("contact_form")
+
 function enviar(){
-	nombrejs = document.contacto_form.nombre.value;	
-	correo_electronicojs = document.contacto_form.correo_electronico.value;
-	asuntojs = document.contacto_form.asunto.value;
-	mensajejs = document.contacto_form.mensaje.value;
-	tipo_usuariojs = document.getElementById("tipo_usuario").value;
-	municipiojs = document.contacto_form.municipio.value;
-	estadojs = document.contacto_form.estado.value;
-	cod_postjs = document.contacto_form.cod_post.value;
-	paisjs = document.contacto_form.pais.value;
+	emailjs.init("PUBLIC_KEY")
 
-	if(document.contacto_form.copia_adicional.checked){
-		//enviar copia
-	}	
-
-	if(document.contacto_form.politica_privacidad.checked){
-		//indicar que se aceptó la politica de privacidad
-	}
-
-	alert("Por hacer");
-
+	emailjs.send("SERVICE_ID", "TEMPLATE_ID", {
+		subject: form.subject.value,
+		name: form.name.value,
+		email: form.email.value,
+		user_type: form.user_type.value,
+		message: form.message.value,
+		country: form.country.value,
+		city: form.city.value,
+		state: form.state.value,
+		zip_code: form.zip_code.value,
+		accepted_privacy_policy: form.accepted_privacy_policy.checked,
+		send_copy: form.send_copy.checked,
+		reply_to: form.send_copy.checked ? form.email.value : ''
+	})
+	.then(result => {
+		console.log(result.text)
+	}, error => {
+		console.log(error.text)
+	})
 }
