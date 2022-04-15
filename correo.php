@@ -38,6 +38,7 @@
                                             'allow_self_signed' => true
                                         )
                                     );
+                    $mail_copy->send();
                 }catch (Exception $e){
                     echo "<div class='mail_message mail_message-error'><p class='mail_title'>ERROR</p> <p>No se pudo enviar la copia del correo</p><p>". $mail->ErrorInfo. "</p> </div>";
                 }   
@@ -55,7 +56,7 @@
             $mail->Password = 'cuatro_08'; // password
             $mail->setFrom($correo_electronico, $nombre); // From email and name
             $mail->addAddress( 'andycorona04@gmail.com', 'Thermonox Contacto'); // to email and name
-            $mail->Subject = 'Mensaje Thermonox Pagina Web ' . $asunto;
+            $mail->Subject = 'Thermonox Cliente Asunto: ' . $asunto;
             $mail->msgHTML($body); //$mail->msgHTML(file_get_contents('contents.html'), __DIR__); //Read an HTML message body from an external file, convert referenced images to embedded,
             $mail->AltBody = 'HTML messaging not supported'; // If html emails is not supported by the receiver, show this body
             // $mail->addAttachment('images/phpmailer_mini.png'); //Attach an image file
