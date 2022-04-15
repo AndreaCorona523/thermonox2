@@ -45,6 +45,7 @@ form li + li {
 /*Format of input and textarea fields of contact form*/
 input,textarea {
 	border: 1px solid var(--yellow);
+    font-family: inherit;
 	height: 32px;
 	min-height: 22px;
 	width: 220px;
@@ -114,6 +115,29 @@ select {
     text-decoration: none;
 }
 
+.mail_message{
+    margin: 5% 0 0 20%;
+    padding: 2%;
+}
+
+.mail_message-sent{
+    background-color: #f2fae3;
+    border: 2px solid #8cc14c;
+    color: #659f13;
+}
+
+.mail_message-error{
+    background-color: #f2fae3;
+    border: 2px solid var(--orange);
+    color: var(--orange);
+}
+
+.mail_title{
+    font-size: 32px;
+    letter-spacing: 0.05em;
+}
+
+
 /*Size adjustment of support info container */
 .support_info_container {
 	height: 100%;
@@ -155,7 +179,7 @@ textarea {
     }
 
     /*Adjust margin and padding of send button*/
-    .send_button {
+    .send_button,.mail_message {
         margin: 5%;
     }
 }

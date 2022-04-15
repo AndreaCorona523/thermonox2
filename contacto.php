@@ -1,3 +1,20 @@
+<?php 
+	if(isset($_POST['enviar'])){
+		$nombre=$_POST['nombre'];
+		$correo_electronico=$_POST['correo_electronico'];
+		$asunto=$_POST['asunto'];
+		$mensaje=$_POST['mensaje'];
+		$tipo_usuario=$_POST['tipo_usuario'];
+		$municipio=$_POST['municipio'];
+		$estado=$_POST['estado'];
+		$cod_post=$_POST['cod_post'];
+		$pais=$_POST['pais'];
+		$copia_adicional='desactivada';
+		$politica_privacidad='desactivada';
+	}
+
+?>
+
 <!DOCTYPE html>
 
 <html lang="es">
@@ -86,27 +103,27 @@
 							<ul class="contacto_form_list">
 								<li>
 									<label for="nombre" >Nombre *</label>
-									<input type="text" name="nombre" id="nombre">
+									<input type="text" name="nombre" id="nombre" value="<?php if(isset($nombre)) echo $nombre ?>">
 								</li>
 								<li>
 									<label for="correo_electronico">Correo electrónico *</label>
-									<input type="email" name="correo_electronico" id="correo_electronico">
+									<input type="text" name="correo_electronico" id="correo_electronico" value="<?php if(isset($correo_electronico)) echo $correo_electronico ?>">
 								</li>
 								<li>
 									<label for="asunto">Asunto *</label>
-									<input type="text" name="asunto" id="asunto"></td>
+									<input type="text" name="asunto" id="asunto" value="<?php if(isset($asunto)) echo $asunto ?>"></td>
 								</li>
 								<li>
 									<label for="mensaje">Mensaje *</label>
-									<textarea name="mensaje" id="message" cols="50" rows="10"> </textarea>
+									<textarea name="mensaje" id="message" cols="50" rows="10"> <?php if(isset($mensaje)) echo $mensaje ?></textarea>
 								</li>
 								<li>
 									<label for="copia_adicional" >Envíame una copia <br>(opcional) </label>
-									<input type="checkbox" name="copia_adicional" id="copia_adicional">
+									<input type="checkbox" name="copia_adicional" id="copia_adicional" value="activada">
 								</li>
 								<li>
 									<label for="tipo_usuario"  class="campo_title">Soy una *</label>
-									<select name="tipo_usuario" id="tipo_usuario" >
+									<select name="tipo_usuario" id="tipo_usuario">
 										<option value="particular">particular</option>
 										<option value="profesional">profesional</option>
 										<option value="empresa">empresa</option>
@@ -115,24 +132,24 @@
 								</li>
 								<li>
 									<label for="municipio">Municipio *</label>
-									<input type="text" name="municipio" id="municipio">
+									<input type="text" name="municipio" id="municipio" value="<?php if(isset($municipio)) echo $municipio ?>">
 								</li>
 								<li>
 									<label for="estado">Estado *</label>
-									<input type="text" name="estado" id="estado">
+									<input type="text" name="estado" id="estado" value="<?php if(isset($estado)) echo $estado ?>">
 								</li>
 								<li>
 									<label for="cod_post">Código Postal *</label>
-									<input type="text" name="cod_post" id="cod_post">
+									<input type="text" name="cod_post" id="cod_post" value="<?php if(isset($cod_post)) echo $cod_post ?>">
 								</li>
 								<li>
 									<label for="pais">País *</label>
-									<input type="text" name="pais" id="pais">
+									<input type="text" name="pais" id="pais" value="<?php if(isset($pais)) echo $pais ?>">
 								</li>
 								<li>
 									<label for="politica_privacidad">Politica de privacidad<br>(opcional)</label>
 									<label id="privacy_policy_label">
-										<input type="checkbox" name="politica_privacidad" id="politica_privacidad">
+										<input type="checkbox" name="politica_privacidad" id="politica_privacidad" value="activada">
 										He leído y entendido la <a href="./politica_privacidad.html" class="privacy_policy_link" target="_blank">política de privacidad.</a> 
 									</label>
 								</li>
@@ -141,8 +158,11 @@
 								</li>
 							</ul>
 						</form>
+						
                         <?php 
-							include("validacion.php");
+							if(isset($_POST['enviar'])){
+								include("validacion.php");
+							}
                         ?>
 					</div>
 				</div>
