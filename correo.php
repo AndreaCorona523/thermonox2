@@ -26,7 +26,7 @@
                     $mail_copy->Username = 'andycorona04@gmail.com'; // email
                     $mail_copy->Password = 'cuatro_08'; // password
                     $mail_copy->setFrom('andycorona04@gmail.com', 'Thermonox Contacto'); // From email and name
-                    $mail_copy->addAddress($correo_electronico, $nombre); // to email and name
+                    $mail_copy->addAddress($correo_electronico, 'Thermonox Contacto'); // to email and name
                     $mail_copy->Subject = 'Thermonox Contacto Copia Formulario ';
                     $mail_copy->msgHTML($body_copy); //$mail->msgHTML(file_get_contents('contents.html'), __DIR__); //Read an HTML message body from an external file, convert referenced images to embedded,
                     $mail_copy->AltBody = 'HTML messaging not supported'; // If html emails is not supported by the receiver, show this body
@@ -40,7 +40,7 @@
                                     );
                     $mail_copy->send();
                 }catch (Exception $e){
-                    echo "<div class='mail_message mail_message-error'><p class='mail_title'>ERROR</p> <p>No se pudo enviar la copia del correo</p><p>". $mail->ErrorInfo. "</p> </div>";
+                    echo "<div class='mail_message mail_message-error'><p class='mail_title'>ERROR</p> <p>No se pudo enviar la copia del correo.</p><p>". $mail->ErrorInfo. "</p> </div>";
                 }   
                 
             }
