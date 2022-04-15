@@ -79,6 +79,7 @@
     flex-direction: column;
     justify-content: space-around;
     min-height: 80px;
+    margin-top: 25px;
 }
 
 /* Sets styles for the footer links */
