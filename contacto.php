@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <html lang="es">
@@ -143,11 +142,7 @@
 							</ul>
 						</form>
                         <?php 
-                            if(isset($_POST['enviar'])){
-                                $nombre=$_POST['nombre'];
-                            }
-                            echo "<p> {$nombre} </p>";
-
+							include("validacion.php");
                         ?>
 					</div>
 				</div>

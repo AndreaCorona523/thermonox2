@@ -33,6 +33,10 @@
 	text-decoration: none;
 }
 
+.error{
+    color: var(--orange);
+}
+
 /*Margin between each form field*/
 form li + li {
     margin-top: 1em;
@@ -81,10 +85,12 @@ label {
 	min-height: 150px;
 }
 
+/*Align text of privacy policy to the left*/
 #privacy_policy_label {
     text-align: left;
 }
 
+/*Format for select field*/
 select {
     border: 1px solid var(--yellow);
     height: 32px;
@@ -144,9 +150,12 @@ textarea {
         margin: 2% auto;
     }
 
+    #privacy_policy_label {
+        text-align: center;
+    }
+
     /*Adjust margin and padding of send button*/
     .send_button {
         margin: 5%;
-        padding: 5% 10%;
     }
 }
