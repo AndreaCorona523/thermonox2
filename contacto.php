@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html lang="es">
@@ -82,7 +83,7 @@
 					<p class="subtitle2">¿Necesita mayores informes o cotización?</p>	
 					<p>* Campo requerido</p>
 					<div class="contact_form_container">
-						<form name="contacto_form">
+						<form name="contacto_form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" method="post">
 							<ul class="contacto_form_list">
 								<li>
 									<label for="nombre" >Nombre *</label>
@@ -137,10 +138,17 @@
 									</label>
 								</li>
 								<li>
-									<button type="submit" class="send_button" onclick="enviar()">Enviar</button>
+									<button type="submit" class="send_button" onclick="enviar()" name="enviar">Enviar</button>
 								</li>
 							</ul>
 						</form>
+                        <?php 
+                            if(isset($_POST['enviar'])){
+                                $nombre=$_POST['nombre'];
+                            }
+                            echo "<p> {$nombre} </p>";
+
+                        ?>
 					</div>
 				</div>
 			</div>
