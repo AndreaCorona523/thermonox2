@@ -65,7 +65,6 @@ p {
 .box-shadow-format {
     border: 1px solid var(--orange);
     box-shadow: 5px 10px 8px var(--orange);
-    margin: 2%;
     text-align: center;
 }
 
@@ -178,6 +177,7 @@ p {
 .general_highlighted_text {
     font-size: 24px;
     font-weight: bold;
+    margin: 2%;
 }
 
 /*Format for atex logo in security page*/
