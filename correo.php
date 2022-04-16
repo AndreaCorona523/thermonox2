@@ -57,7 +57,7 @@
                     }   
                     
                 }
-
+                $mail->ClearAddresses();
                 $mail->setFrom($correo_electronico, $nombre); // From email and name
                 $mail->addAddress( 'andycorona04@gmail.com', 'Thermonox Contacto'); // to email and name
                 $mail->Subject = 'Thermonox Cliente Asunto: ' . $asunto;
