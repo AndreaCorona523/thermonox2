@@ -217,7 +217,7 @@ ul {
         font-size: 18px;
         gap: 1rem;
         justify-self: center;
-        padding: 0 2rem;
+        padding: 0 3rem;
     }
 
     .contact__item {
@@ -347,7 +347,7 @@ ul {
         display: flex;
         flex-wrap: wrap;
         font-size: 18px;
-        gap: 0 3rem;
+        gap: 0 2rem;
     }
 
     /* Sets styles and animation for the navbar dropdown menus */
@@ -367,13 +367,20 @@ ul {
 
     /* Sets nabvar item postion and limits its childs width */
     .navbar__item {
+        margin: auto;
         position: relative;
     }
 
     /* Styles the navbar main links */
     .navbar__item > a {
         color: var(--yellow);
-        text-decoration: none;   
+        font-weight: bold; 
+        text-decoration: none;
+    }
+
+    .navbar__break-line{
+        color: var(--yellow);
+        font-size: 30px;
     }
 
     /* Styles current section link */
