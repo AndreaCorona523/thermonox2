@@ -9,8 +9,8 @@
 		$estado=$_POST['estado'];
 		$cod_post=$_POST['cod_post'];
 		$pais=$_POST['pais'];
-		$copia_adicional='desactivada';
-		$politica_privacidad='desactivada';
+		$copia_adicional='No solicitada';
+		$politica_privacidad='No aceptada';
 	}
 
 ?>
@@ -119,7 +119,7 @@
 								</li>
 								<li>
 									<label for="copia_adicional" >Envíame una copia <br>(opcional) </label>
-									<input type="checkbox" name="copia_adicional" id="copia_adicional" value="activada">
+									<input type="checkbox" name="copia_adicional" id="copia_adicional" value="Solicitada">
 								</li>
 								<li>
 									<label for="tipo_usuario"  class="campo_title">Soy una *</label>
@@ -149,7 +149,7 @@
 								<li>
 									<label for="politica_privacidad">Politica de privacidad<br>(opcional)</label>
 									<label id="privacy_policy_label">
-										<input type="checkbox" name="politica_privacidad" id="politica_privacidad" value="activada">
+										<input type="checkbox" name="politica_privacidad" id="politica_privacidad" value="Aceptada">
 										He leído y entendido la <a href="./politica_privacidad.html" class="privacy_policy_link" target="_blank">política de privacidad.</a> 
 									</label>
 								</li>
