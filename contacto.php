@@ -1,16 +1,16 @@
 <?php 
 	if(isset($_POST['enviar'])){
-		$nombre=$_POST['nombre'];
-		$correo_electronico=$_POST['correo_electronico'];
-		$asunto=$_POST['asunto'];
-		$mensaje=$_POST['mensaje'];
-		$tipo_usuario=$_POST['tipo_usuario'];
-		$municipio=$_POST['municipio'];
-		$estado=$_POST['estado'];
-		$cod_post=$_POST['cod_post'];
-		$pais=$_POST['pais'];
-		$copia_adicional='No solicitada';
-		$politica_privacidad='No aceptada';
+		$name=$_POST['name'];
+		$email=$_POST['email'];
+		$subject=$_POST['subject'];
+		$message=$_POST['message'];
+		$user_type=$_POST['user_type'];
+		$city=$_POST['city'];
+		$state=$_POST['state'];
+		$zip_code=$_POST['zip_code'];
+		$country=$_POST['country'];
+		$send_copy='No solicitada';
+		$privacy_policy='No aceptada';
 	}
 
 ?>
@@ -34,7 +34,7 @@
 			  <div class="contact">
 				<a href="#" class="contact__item">Llámanos al +722 555 1234</a>
 				<span class="contact__item" >|</span>
-				<a class="contact__item" href="./contacto.html">Escríbenos</a>
+				<a class="contact__item" href="./contacto.php">Escríbenos</a>
 			  </div>
 			  <div class="language_menu">
 				<div class="language_menu__select">
@@ -56,6 +56,7 @@
 			  </a>
 			  <ul class="navbar">
 				<li class="navbar__item"><a href="./index.html">INICIO</a></li>
+				<li><span class="navbar__break-line" >|</span></li>
 				<li class="navbar__item">
 				  <a href="./acerca_thermonox.html">THERMONOX®</a>
 				  <ul class="navbar__dropdown">
@@ -64,6 +65,7 @@
 					<li class="dropdown__option"><a href="./seguridad.html">Seguridad</a></li>
 				  </ul>
 				</li>
+				<li><span class="navbar__break-line" >|</span></li>
 				<li class="navbar__item">
 				  <a href="./acerca_thermonoxilo.html">THERMONOXILO</a>
 				  <ul class="navbar__dropdown">
@@ -72,7 +74,8 @@
 					<li class="dropdown__option"><a href="./seguridad_thermonoxilo.html">Seguridad</a></li>
 				  </ul>
 				</li>
-				<li class="navbar__item navbar__item--selected"><a href="./contacto.html">CONTACTO</a></li>
+				<li><span class="navbar__break-line" >|</span></li>
+				<li class="navbar__item navbar__item--selected"><a href="./contacto.php">CONTACTO</a></li>
 			  </ul>
 			</div>
 		  </header>
@@ -102,28 +105,28 @@
 						<form name="contacto_form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" method="post">
 							<ul class="contacto_form_list">
 								<li>
-									<label for="nombre" >Nombre *</label>
-									<input type="text" name="nombre" id="nombre" value="<?php if(isset($nombre)) echo $nombre ?>">
+									<label for="name" >Nombre *</label>
+									<input type="text" name="name" id="name" value="<?php if(isset($name)) echo $name ?>">
 								</li>
 								<li>
-									<label for="correo_electronico">Correo electrónico *</label>
-									<input type="text" name="correo_electronico" id="correo_electronico" value="<?php if(isset($correo_electronico)) echo $correo_electronico ?>">
+									<label for="email">Correo electrónico *</label>
+									<input type="text" name="email" id="email" value="<?php if(isset($email)) echo $email ?>">
 								</li>
 								<li>
-									<label for="asunto">Asunto *</label>
-									<input type="text" name="asunto" id="asunto" value="<?php if(isset($asunto)) echo $asunto ?>"></td>
+									<label for="subject">Asunto *</label>
+									<input type="text" name="subject" id="subject" value="<?php if(isset($subject)) echo $subject ?>"></td>
 								</li>
 								<li>
-									<label for="mensaje">Mensaje *</label>
-									<textarea name="mensaje" id="message" cols="50" rows="10"> <?php if(isset($mensaje)) echo $mensaje ?></textarea>
+									<label for="message">Mensaje *</label>
+									<textarea name="message" id="message" cols="50" rows="10"> <?php if(isset($message)) echo $message ?></textarea>
 								</li>
 								<li>
-									<label for="copia_adicional" >Envíame una copia <br>(opcional) </label>
-									<input type="checkbox" name="copia_adicional" id="copia_adicional" value="Solicitada">
+									<label for="send_copy" >Envíame una copia <br>(opcional) </label>
+									<input type="checkbox" name="send_copy" id="send_copy" value="Solicitada">
 								</li>
 								<li>
-									<label for="tipo_usuario"  class="campo_title">Soy una *</label>
-									<select name="tipo_usuario" id="tipo_usuario">
+									<label for="user_type"  class="campo_title">Soy una *</label>
+									<select name="user_type" id="user_type">
 										<option value="particular">particular</option>
 										<option value="profesional">profesional</option>
 										<option value="empresa">empresa</option>
@@ -131,25 +134,25 @@
 									</select>
 								</li>
 								<li>
-									<label for="municipio">Municipio *</label>
-									<input type="text" name="municipio" id="municipio" value="<?php if(isset($municipio)) echo $municipio ?>">
+									<label for="city">Municipio *</label>
+									<input type="text" name="city" id="city" value="<?php if(isset($city)) echo $city ?>">
 								</li>
 								<li>
-									<label for="estado">Estado *</label>
-									<input type="text" name="estado" id="estado" value="<?php if(isset($estado)) echo $estado ?>">
+									<label for="state">Estado *</label>
+									<input type="text" name="state" id="state" value="<?php if(isset($state)) echo $state ?>">
 								</li>
 								<li>
-									<label for="cod_post">Código Postal *</label>
-									<input type="text" name="cod_post" id="cod_post" value="<?php if(isset($cod_post)) echo $cod_post ?>">
+									<label for="zip_code">Código Postal *</label>
+									<input type="text" name="zip_code" id="zip_code" value="<?php if(isset($zip_code)) echo $zip_code ?>">
 								</li>
 								<li>
-									<label for="pais">País *</label>
-									<input type="text" name="pais" id="pais" value="<?php if(isset($pais)) echo $pais ?>">
+									<label for="country">País *</label>
+									<input type="text" name="country" id="country" value="<?php if(isset($country)) echo $country ?>">
 								</li>
 								<li>
-									<label for="politica_privacidad">Politica de privacidad<br>(opcional)</label>
+									<label for="privacy_policy">Politica de privacidad<br>(opcional)</label>
 									<label id="privacy_policy_label">
-										<input type="checkbox" name="politica_privacidad" id="politica_privacidad" value="Aceptada">
+										<input type="checkbox" name="privacy_policy" id="privacy_policy" value="Aceptada">
 										He leído y entendido la <a href="./politica_privacidad.html" class="privacy_policy_link" target="_blank">política de privacidad.</a> 
 									</label>
 								</li>
@@ -169,7 +172,7 @@
 			</div>
 			<div class="footer">
 				<a class="footer__item" href="./politica_privacidad.html">Politica de privacidad</a>
-				<a class="footer__item" href="./contacto.html">Contacto <br>xxxxx@gmail.com</a>
+				<a class="footer__item" href="./contacto.php">Contacto <br>xxxxx@gmail.com</a>
 				<a class="footer__item" href="https://www.thermonox.de/" target="_blank">Visítanos en Thermonox.de</a>
 			</div>
 			<div class="offcanvas">
@@ -196,7 +199,7 @@
 						<li class="offcanvas_subnav__item"><a href="./seguridad_thermonoxilo.html">Seguridad</a></li>
 					  </ul>
 				  </li>
-				  <li class="offcanvas_nav__item offcanvas_nav__item--selected"><a href="./contacto.html">Contacto</a></li>
+				  <li class="offcanvas_nav__item offcanvas_nav__item--selected"><a href="./contacto.php">Contacto</a></li>
 				</ul>
 			</div>
 			<div class="cover" id="cover"></div>

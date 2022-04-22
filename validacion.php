@@ -1,54 +1,54 @@
 <?php
     $valid = true;
 	if(isset($_POST['enviar'])){        
-        if(empty($nombre)){
+        if(empty($name)){
             echo "<p class='error'>* Agrega tu nombre </p>";
             $valid = false;
         }
-        if(empty($correo_electronico)){
+        if(empty($email)){
             echo "<p class='error'>* Agrega tu correo electrónico </p>";
             $valid = false;
         }else{
-            if(!filter_var($correo_electronico,FILTER_VALIDATE_EMAIL)){
+            if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
                 echo "<p class='error'>* El correo es incorrecto </p>";
                 $valid = false;
             }
         }
-        if(empty($asunto)){
+        if(empty($subject)){
             echo "<p class='error'>* Agrega tu asunto </p>";
             $valid = false;
         }
-        if(empty($mensaje)){
+        if(empty($message)){
             echo "<p class='error'>* Agrega tu mensaje </p>";
             $valid = false;
         }
-        if(empty($municipio)){
+        if(empty($city)){
             echo "<p class='error'>* Agrega tu municipio </p>";
             $valid = false;
         }
-        if(empty($estado)){
+        if(empty($state)){
             echo "<p class='error'>* Agrega tu estado </p>";
             $valid = false;
         }
-        if(empty($cod_post)){
+        if(empty($zip_code)){
             echo "<p class='error'>* Agrega tu código postal</p>";
             $valid = false;
         }else{
-            if(!is_numeric($cod_post)){
+            if(!is_numeric($zip_code)){
                 echo "<p class='error'>* El código postal tiene que ser un número</p>";
                 $valid = false;
             }
         }
-        if(empty($pais)){
+        if(empty($country)){
             echo "<p class='error'>* Agrega tu país</p>";
             $valid = false;
         }
 
-        if(!empty($_POST['copia_adicional'])){
-            $copia_adicional=$_POST['copia_adicional'];
+        if(!empty($_POST['send_copy'])){
+            $send_copy=$_POST['send_copy'];
         }
-        if(!empty($_POST['politica_privacidad'])){
-            $politica_privacidad=$_POST['politica_privacidad'];
+        if(!empty($_POST['privacy_policy'])){
+            $privacy_policy=$_POST['privacy_policy'];
         }
         
         if($valid){

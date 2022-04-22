@@ -68,7 +68,7 @@ input[type="checkbox"] {
 }
 
 /*Format of invalid input for field in contact form*/
-input:invalid {
+input:invalid, .invalid {
     background: #f2dede;
     border: 1px solid var(--orange);
     padding: 4px 6px;
