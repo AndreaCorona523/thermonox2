@@ -18,6 +18,10 @@
         $info = "<p><b>Nombre: </b>" . $nombre . "</p><p><b>Correo Electrónico: </b>" . $correo_electronico .  "</p><p><b>Asunto: </b>" . $asunto .  "</p><p><b>Mensaje: </b>" . $mensaje . "</p><p><b>Tipo de Usuario: </b>" . $tipo_usuario . "</p><p><b>Municipio: </b>" . $municipio;
         $info .= "</p><p><b>Estado: </b>" . $estado . "</p><p><b>Código Postal: </b>" . $cod_post . "</p><p><b>País: </b>" . $pais . "</p><p><b>Copia Adicional: </b>" . $copia_adicional . " </p><p><b>Política de privacidad: </b>" . $politica_privacidad ."</p>";
 
+        //Define account info
+        $username= 'thermonox.proyecto@gmail.com';
+        $password= 'thermonox-1';
+
         //Send mails 
         if(isset($_POST['enviar'])){
         try{
@@ -28,8 +32,8 @@
                 $mail->Port = 587; // TLS only
                 $mail->SMTPSecure = 'tls'; // ssl is deprecated
                 $mail->SMTPAuth = true;
-                $mail->Username = 'andycorona04@gmail.com'; // email
-                $mail->Password = 'cuatro_08'; // password
+                $mail->Username = $username; // email
+                $mail->Password = $password; // password
                 $mail->CharSet = 'UTF-8'; // Use special characters
                 $mail->AddEmbeddedImage($sImagen, 'logo'); //embedded image
                 
@@ -44,7 +48,7 @@
 
                 if ($copia_adicional=='Solicitada'){
                     try{
-                        $mail->setFrom('andycorona04@gmail.com', 'Thermonox Contacto'); // From email and name
+                        $mail->setFrom($username, 'Thermonox Contacto'); // From email and name
                         $mail->addAddress($correo_electronico, 'Thermonox Contacto'); // to email and name
                         $mail->Subject = 'Thermonox Contacto Copia Formulario ';
                         $shtml = file_get_contents('correo_cliente.html'); // read html
@@ -59,7 +63,7 @@
                 }
                 $mail->ClearAddresses();
                 $mail->setFrom($correo_electronico, $nombre); // From email and name
-                $mail->addAddress( 'andycorona04@gmail.com', 'Thermonox Contacto'); // to email and name
+                $mail->addAddress( $username, 'Thermonox Contacto'); // to email and name
                 $mail->Subject = 'Thermonox Cliente Asunto: ' . $asunto;
                 $shtml = file_get_contents('correo_empresa.html'); // read html
                 $incss = str_replace('<style id="estilo"></style>',"<style>$scss</style>",$shtml); //replace css in html file
