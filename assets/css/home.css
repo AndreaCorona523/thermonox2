@@ -35,8 +35,10 @@
 /* Sets styles for the element "button" inside a "call" component */
 .call__button{
     background-color: var(--orange);
+    border: 0;
     color: white;
     display: block;
+    font-size: inherit;
     margin-bottom: 1rem;
     padding: 0.3rem 0.8rem;
     text-decoration: none;
