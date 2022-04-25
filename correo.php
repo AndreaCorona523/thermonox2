@@ -1,7 +1,11 @@
 <?php
+    require __DIR__.'/vendor/autoload.php';
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\SMTP;
     use PHPMailer\PHPMailer\Exception;
+
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+    $dotenv->load();
 
     require $_SERVER['DOCUMENT_ROOT'] . '/assets/PHPMailer/Exception.php';
     require $_SERVER['DOCUMENT_ROOT'] . '/assets/PHPMailer/PHPMailer.php';
@@ -20,7 +24,7 @@
     
     //Define account info
     $username= 'thermonox.proyecto@gmail.com';
-    $password= 'thermonox-1';
+    $password= $_ENV['PASSWORD'];
 
     //Send mails 
     if(isset($_POST['enviar'])){
