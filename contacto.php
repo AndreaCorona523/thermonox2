@@ -32,7 +32,7 @@
 		<header class="header_container">
 			<div class="language_container">
 			  <div class="contact">
-				<a href="#" class="contact__item">Llámanos al +722 555 1234</a>
+				<a href="#" class="contact__item">Llámanos al 462 103 0321</a>
 				<span class="contact__item" >|</span>
 				<a class="contact__item" href="./contacto.php">Escríbenos</a>
 			  </div>
