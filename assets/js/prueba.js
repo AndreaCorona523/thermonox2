@@ -5,8 +5,8 @@ document.getElementsByTagName('head')[0].appendChild(script);
 
 
 $(document).ready(()=> {
-	$('#modal_container').show();
-	$('#circulacion_show').click(function() {
-		$('#modal_container').hide();
-	});
-})
+	$('#modal__close__button').click(function() {
+		$('#modal__container').hide();
+	});	
+	
+});

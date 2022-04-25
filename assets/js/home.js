@@ -5,9 +5,7 @@ document.getElementsByTagName('head')[0].appendChild(script);
 
 
 $(document).ready(()=> {
-  $('#call__button').click(function() {
-		//$('#modal_container').removeClass("show");
-		$('#modal_container').hide();
+	$('#modal__close__button').click(function() {
+		$('#modal__container').hide();
 	});	
-
-})
+});

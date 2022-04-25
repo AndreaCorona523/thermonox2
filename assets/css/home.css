@@ -13,8 +13,8 @@
     padding: 2rem;
 }
 
-/* Sets the styles for the "call" component */
-.call{
+/* Sets the styles for the "modal" component */
+.call, .modal{
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -22,14 +22,6 @@
     justify-content: space-between;
     max-width: 500px;
     text-align: center;
-}
-
-/* Sets styles for a container that adds a border to the "call" component */
-.call_border {
-    background-color: var(light-background);
-    border: 5px solid var(--orange);
-    box-shadow: 5px 10px 8px rgb(68 68 68 / 50%);
-    padding: 0 1rem;
 }
 
 /* Sets styles for the element "button" inside a "call" component */
@@ -50,7 +42,7 @@
 }
 
 /* Sets styles for the element "title" of the "call" component*/
-.call__title{
+.call__title, .modal__title{
     color: var(--orange);
     font-weight: 400;
     margin-top: 1rem;
@@ -150,8 +142,73 @@
     padding: 2rem 0;
 }
 
+/*Sets color of atex logo to white*/
 .hero__atex-konform svg{
     fill: white;
+}
+
+/*Defines gap between elements inside modal*/
+.modal{
+    gap: 0.5rem;
+}
+
+/* Sets styles for a container that adds a border to the "modal" component */
+.modal_border {
+    background-color: var(light-background);
+    border: 5px solid var(--orange);
+    box-shadow: 5px 10px 8px rgb(68 68 68 / 50%);
+    padding: 0 1rem;
+}
+
+/*Format of close button modal*/
+.modal__close{
+    align-items: center;
+    background: none;
+    border: none;
+    color: var(--orange);
+    cursor: pointer;
+    display: flex;
+    font-size: inherit;
+    outline: none;
+    padding: (--gap);
+}
+
+/*Format for modal containrer*/
+.modal__container{
+    align-items: center;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    --gap: 15px;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    padding: var(--gap);
+    position: fixed;
+    top: 0;
+    width: 100vw;
+}
+
+/*Adds bottom margin after text*/
+.modal__extract{
+    margin-bottom: 10%;
+}
+
+/*Sets background color of modal to white*/
+.modal__inner{
+    background-color: white;
+}
+
+/*Removes top margin of title*/
+.modal__title{
+    margin-top: 0;
+}
+
+/*Sets close button to top left corner of modal*/
+.modal__top {
+    background-color: white;
+    margin: 1%;
+    padding-left: 95%;
+    width: 100%;
 }
 
 /* Removes the max-width atribute from the "call" component for the "notice" component */
