@@ -3,9 +3,15 @@
     use PHPMailer\PHPMailer\SMTP;
     use PHPMailer\PHPMailer\Exception;
 
+    
+
     require $_SERVER['DOCUMENT_ROOT'] . '/assets/PHPMailer/Exception.php';
     require $_SERVER['DOCUMENT_ROOT'] . '/assets/PHPMailer/PHPMailer.php';
     require $_SERVER['DOCUMENT_ROOT'] . '/assets/PHPMailer/SMTP.php';
+    require __DIR__.'/vendor/autoload.php';
+
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+    $dotenv->load();
 
     //open assets for mails
     $sImagen = 'assets/images/thermonox-neu-logo-xl.png';
@@ -20,7 +26,7 @@
     
     //Define account info
     $username= 'thermonox.proyecto@gmail.com';
-    $password= 'thermonox-1';
+    $password= $_ENV['PASSWORD'];
 
     //Send mails 
     if(isset($_POST['enviar'])){
