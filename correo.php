@@ -1,15 +1,17 @@
 <?php
-    require __DIR__.'/vendor/autoload.php';
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\SMTP;
     use PHPMailer\PHPMailer\Exception;
 
-    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-    $dotenv->load();
+    
 
     require $_SERVER['DOCUMENT_ROOT'] . '/assets/PHPMailer/Exception.php';
     require $_SERVER['DOCUMENT_ROOT'] . '/assets/PHPMailer/PHPMailer.php';
     require $_SERVER['DOCUMENT_ROOT'] . '/assets/PHPMailer/SMTP.php';
+    require __DIR__.'/vendor/autoload.php';
+
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+    $dotenv->load();
 
     //open assets for mails
     $sImagen = 'assets/images/thermonox-neu-logo-xl.png';
