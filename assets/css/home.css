@@ -149,12 +149,11 @@
 
 /*Defines gap between elements inside modal*/
 .modal{
-    gap: 0.5rem;
+    gap: 0.3rem;
 }
 
 /* Sets styles for a container that adds a border to the "modal" component */
 .modal_border {
-    background-color: var(light-background);
     border: 5px solid var(--orange);
     box-shadow: 5px 10px 8px rgb(68 68 68 / 50%);
     padding: 0 1rem;
@@ -170,7 +169,7 @@
     display: flex;
     font-size: inherit;
     outline: none;
-    padding: var(--gap);
+    padding: 15px 0 10px 10px;
 }
 
 /*Format for modal containrer*/
@@ -182,7 +181,7 @@
     height: 100vh;
     justify-content: center;
     left: 0;
-    padding: var(--gap);
+    padding: 15px;
     position: fixed;
     top: 0;
     width: 100vw;
@@ -201,13 +200,13 @@
 /*Removes top margin of title*/
 .modal__title{
     margin-top: 0;
+    font-size: 24px;
 }
 
 /*Sets close button to top left corner of modal*/
 .modal__top {
     background-color: white;
-    margin: 1%;
-    padding-left: 90%;
+    padding-left: 85%;
     width: 100%;
 }
 

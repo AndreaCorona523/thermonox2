@@ -25,20 +25,6 @@
 	margin-right: 10%;
 }
 
-/*Format of container in aplication thermonoxilo page */
-.aplication_thermonoxilo_container{
-	align-items: center;
-	display: flex;
-	flex-direction: row;
-}
-
-/*Adjust alignment and font-size of text in aplication thermonoxilo page */
-#aplication_thermonoxilo_text{
-	font-size: 24px;
-	margin: auto 5%;
-	padding: auto;
-}
-
 /*Align elements to the right*/
 .float-right{
 	float: right;
@@ -61,8 +47,13 @@
 
 /*Adjust margin and width of text in security thermonoxilo page*/
 #security_thermonoxilo_text{
-	width: 70%;
-	margin: 0 auto 2.5% auto;
+	margin: auto 2%;
+    padding: 1%;
+	width: 100%;
+}
+
+.align-center{
+	text-align: center;
 }
 
 /*Add space between elements on the technical data list in about thermonoxilo page*/
@@ -112,7 +103,7 @@
 	}
 
 	/*Set display direction to column*/
-	.about_thermonoxilo_container, .aplication_thermonoxilo_container{
+	.about_thermonoxilo_container{
 		flex-direction: column;
 	}
 
@@ -129,12 +120,6 @@
 	/*Reverse order of column display*/
 	.order-column-reverse{
 		flex-direction: column-reverse;
-	}
-
-	/*Increase width and margin of security thermonoxilo text*/
-	.security_thermonoxilo_text{
-		margin: 5% auto;
-		width: 90%;
 	}
 
 	/*Add padding to image container*/
