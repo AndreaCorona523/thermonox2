@@ -263,4 +263,9 @@
         align-items: stretch;
         flex-direction: row;
     }
+
+    /*Increases padding of close button*/
+    .modal__top {
+        padding-left: 90%;
+    }
 }
