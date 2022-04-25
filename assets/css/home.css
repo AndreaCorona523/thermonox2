@@ -170,7 +170,7 @@
     display: flex;
     font-size: inherit;
     outline: none;
-    padding: (--gap);
+    padding: var(--gap);
 }
 
 /*Format for modal containrer*/
@@ -207,7 +207,7 @@
 .modal__top {
     background-color: white;
     margin: 1%;
-    padding-left: 95%;
+    padding-left: 90%;
     width: 100%;
 }
 

@@ -125,8 +125,9 @@
 									<input type="checkbox" name="send_copy" id="send_copy" value="Solicitada">
 								</li>
 								<li>
-									<label for="user_type"  class="campo_title">Soy una *</label>
+									<label for="user_type"  class="campo_title">Soy una </label>
 									<select name="user_type" id="user_type">
+										<option value="No seleccionado">Selecciona una opción</option>
 										<option value="particular">particular</option>
 										<option value="profesional">profesional</option>
 										<option value="empresa">empresa</option>
