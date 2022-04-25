@@ -230,12 +230,6 @@ p {
     width: 33%;
 }
 
-/*Fade effect for slideshow transition*/
-@keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-}
-
 /*Adjusting bottom margin of limitations list in aplications page*/
 .limitations_aplications_list {
 	margin-bottom: 2%;
@@ -365,6 +359,12 @@ p {
 /*Background color for active and dot hovering in slideshow */    
 .active, .dot:hover {
     background-color: var(--orange);
+}
+
+/*Fade effect for slideshow transition*/
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
 }
 
 /*Format and size adjustment for mobile devices*/
