@@ -3,8 +3,6 @@
     use PHPMailer\PHPMailer\SMTP;
     use PHPMailer\PHPMailer\Exception;
 
-    
-
     require $_SERVER['DOCUMENT_ROOT'] . '/assets/PHPMailer/Exception.php';
     require $_SERVER['DOCUMENT_ROOT'] . '/assets/PHPMailer/PHPMailer.php';
     require $_SERVER['DOCUMENT_ROOT'] . '/assets/PHPMailer/SMTP.php';
