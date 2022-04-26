@@ -77,6 +77,11 @@ p {
     margin: 3% 0;
 }
 
+/* Adding for background color for selected button and hovering*/
+.characteristics_functioning_selected_button,.characteristics_functioning_table td:hover{
+    background-color: rgb(235 91 37 / 60%);
+}
+
 /*Align elements and text to center of characteristics table in functioning page*/
 .characteristics_functioning_table {
 	justify-content: center;
@@ -98,10 +103,7 @@ p {
     text-align: center;
 }
 
-/*Adding for background color for selected button and hovering*/
-.characteristics_functioning_selected_button,.characteristics_functioning_button:hover {
-	background-color: rgb(235 91 37 / 60%);
-}
+
 
 /*Adding format for characteristics slides in mobile devices*/
 .characteristic_slide {
