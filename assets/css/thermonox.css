@@ -90,14 +90,14 @@ p {
 
 /*Adding border in-between elements in characteristics table in functioning page*/
 .characteristics_functioning_table td:nth-child(n+2) {
-    border-left: 1px solid var(--orange);
+    border-left: 2px solid var(--orange);
     padding: 0 0.5% 0 0.5%;
 }
 
 /*Text format for characteristics table in functioning page*/
 .characteristics_functioning_table_text {
-    border-bottom: 1px solid var(--orange);
-	border-top: 1px solid var(--orange);
+    border-bottom: 2px solid var(--orange);
+	border-top: 2px solid var(--orange);
 	height: auto;
 	padding: 2%;
     text-align: center;
