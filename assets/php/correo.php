@@ -2,7 +2,8 @@
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\SMTP;
     use PHPMailer\PHPMailer\Exception;
-        
+    
+    //open libraries needed por PHPMailer
     require $_SERVER['DOCUMENT_ROOT'] . '/assets/php/PHPMailer/Exception.php';
     require $_SERVER['DOCUMENT_ROOT'] . '/assets/php/PHPMailer/PHPMailer.php';
     require $_SERVER['DOCUMENT_ROOT'] . '/assets/php/PHPMailer/SMTP.php';
@@ -13,11 +14,12 @@
     $dotenv->load();
 
     //Define account info
-    $username= 'thermonox.proyecto@gmail.com';
+    $username=$_ENV['USERNAME']; 
     $password= $_ENV['PASSWORD'];
+    $email_admin= $_ENV['EMAIL_ADMIN'];
 
     //open assets for mails
-    $sImagen = '../assets/images/thermonox-neu-logo-xl.png';
+    $sImagen = '../assets/images/thermonox-neu-logo-xl.png'; //address of image for mail
     $rcss =  __DIR__ . '/mail_assets/formato_correo.css';//upload css file
     $fcss = fopen ($rcss, "r");//open css file
     $scss = fread ($fcss, filesize ($rcss));//read css file 
@@ -62,7 +64,7 @@
             $mail = new PHPMailer(true);
             $mail->isSMTP(); 
             $mail->SMTPDebug = 0; // 0 = off (for production use) - 1 = client messages - 2 = client and server messages
-            $mail->Host = "smtp.gmail.com"; // use $mail->Host = gethostbyname('smtp.gmail.com'); // if your network does not support SMTP over IPv6
+            $mail->Host = "smtp.gmail.com"; // name of the SMTP Server used. 
             $mail->Port = 587; // TLS only
             $mail->SMTPSecure = 'tls'; // ssl is deprecated
             $mail->SMTPAuth = true;
@@ -94,9 +96,9 @@
                 }   
                 
             }
-            $mail->ClearAddresses();
-            $mail->setFrom($email, $name_mail); // From email and name
-            $mail->addAddress($username, $name_mail); // to email and name
+            $mail->ClearAddresses(); //clears previous addresses
+            $mail->setFrom($username, $name_mail); // From email and name
+            $mail->addAddress($email_admin, $name_mail); // to email and name
             $mail->Subject = $subject_admin;
             $shtml = file_get_contents($html_admin); // read html
             $incss = str_replace('<style id="estilo"></style>',"<style>$scss</style>",$shtml); //replace css in html file
