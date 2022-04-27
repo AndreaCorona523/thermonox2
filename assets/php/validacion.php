@@ -1,47 +1,104 @@
 <?php
     $valid = true;
-	if(isset($_POST['enviar'])){        
-        if(empty($name)){
-            echo "<p class='error'>* Agrega tu nombre </p>";
-            $valid = false;
-        }
-        if(empty($email)){
-            echo "<p class='error'>* Agrega tu correo electrónico </p>";
-            $valid = false;
-        }else{
-            if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
-                echo "<p class='error'>* El correo es incorrecto </p>";
+    $variables = array();
+    
+	if(isset($_POST['enviar'])){     
+        if(strcmp($language, 'es')==0){
+            if(empty($name)){
+                $variables[] = 'nombre';
                 $valid = false;
             }
-        }
-        if(empty($subject)){
-            echo "<p class='error'>* Agrega tu asunto </p>";
-            $valid = false;
-        }
-        if(empty($message)){
-            echo "<p class='error'>* Agrega tu mensaje </p>";
-            $valid = false;
-        }
-        if(empty($city)){
-            echo "<p class='error'>* Agrega tu municipio </p>";
-            $valid = false;
-        }
-        if(empty($state)){
-            echo "<p class='error'>* Agrega tu estado </p>";
-            $valid = false;
-        }
-        if(empty($zip_code)){
-            echo "<p class='error'>* Agrega tu código postal</p>";
-            $valid = false;
-        }else{
-            if(!is_numeric($zip_code)){
-                echo "<p class='error'>* El código postal tiene que ser un número</p>";
+            if(empty($email)){
+                $variables[] = 'correo electrónico';
+                $valid = false;
+            }else{
+                if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
+                    echo "<p class='error'>* El correo es incorrecto </p>";
+                    $valid = false;
+                }
+            }
+            if(empty($subject)){
+                $variables[] = 'asunto';
                 $valid = false;
             }
-        }
-        if(empty($country)){
-            echo "<p class='error'>* Agrega tu país</p>";
-            $valid = false;
+            if(empty($message)){
+                $variables[] = 'mensaje';
+                $valid = false;
+            }
+            if(empty($city)){
+                $variables[] = 'municipio';
+                $valid = false;
+            }
+            if(empty($state)){
+                $variables[] = 'estado';
+                $valid = false;
+            }
+            if(empty($zip_code)){
+                $variables[] = 'código postal';
+                $valid = false;
+            }else{
+                if(!is_numeric($zip_code)){
+                    echo "<p class='error'>* El código postal tiene que ser un número</p>";
+                    $valid = false;
+                }
+            }
+            if(empty($country)){
+                $variables[] = 'país';
+                $valid = false;
+            }
+    
+            foreach ($variables as &$field) {
+                echo "<p class='error'>* Agrega tu ". $field ."</p>";
+            }
+            
+        }else{
+            if(empty($name)){
+                $variables[] = 'name';
+                $valid = false;
+            }
+            if(empty($email)){
+                $variables[] = 'email';
+                $valid = false;
+            }else{
+                if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
+                    echo "<p class='error'>* The email is invalid </p>";
+                    $valid = false;
+                }
+            }
+            if(empty($subject)){
+                $variables[] = 'subject';
+                $valid = false;
+            }
+            if(empty($message)){
+                $variables[] = 'message';
+                $valid = false;
+            }
+            if(empty($city)){
+                $variables[] = 'city';
+                $valid = false;
+            }
+            if(empty($state)){
+                $variables[] = 'state';
+                $valid = false;
+            }
+            if(empty($zip_code)){
+                $variables[] = 'zip code';
+                $valid = false;
+            }else{
+                if(!is_numeric($zip_code)){
+                    echo "<p class='error'>* The zip code has to be numeric</p>";
+                    $valid = false;
+                }
+            }
+            if(empty($country)){
+                $variables[] = 'country';
+                $valid = false;
+            }
+    
+            foreach ($variables as &$field) {
+                echo "<p class='error'>* Add your ". $field ."</p>";
+            }
+
         }
 
         if(!empty($_POST['send_copy'])){
@@ -53,7 +110,6 @@
         
         if($valid){
             include("correo.php");
-            
         }
     }
 ?>

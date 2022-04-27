@@ -11,7 +11,7 @@ p {
     width: 100%;
 }
 
-/*Adding padding for cards in security page*/
+/*Adding padding for cards in safety page*/
 .add-padding {
     padding: 10%;
 }
@@ -29,7 +29,7 @@ p {
 }
 
 /*Check marker format for lists*/
-.advantages_list li::marker,.guarantees_security_list li::marker,.services_list li::marker, .sectors_aplications_list li::marker {
+.advantages_list li::marker,.guarantees_safety_list li::marker,.services_list li::marker, .sectors_applications_list li::marker {
     content: "\f00c";
     font-family: "FontAwesome";
     color: #8cc14c;
@@ -44,13 +44,13 @@ p {
 }
 
 /*Row format for items in containers*/
-.aplications_container,.characteristics_functioning_slides_container,.guarantees_security_container, .industries_aplications_list, .security_cards_container {
+.applications_container,.characteristics_functioning_slides_container,.guarantees_safety_container, .industries_applications_list, .safety_cards_container {
     display: flex;
     flex-direction: row;
 }
 
-/*Format for aplications info container */
-.aplications_info_container {
+/*Format for applications info container */
+.applications_info_container {
     background-color: var(light-background);
     border: 5px solid var(--orange);
     border-top-right-radius: 400px 50px;
@@ -164,13 +164,13 @@ p {
     color: white;
 }
 
-/*Width of guarantees list in security page*/
-.guarantees_security_list {
+/*Width of guarantees list in safety page*/
+.guarantees_safety_list {
     width: 70%;
 }
 
-/*Adjusting alignment of guarantees list in security page*/
-.guarantees_security_list li {
+/*Adjusting alignment of guarantees list in safety page*/
+.guarantees_safety_list li {
 	margin: 1% 2.5%;
 	padding: 0 1%;
 }
@@ -182,35 +182,35 @@ p {
     margin: 2%;
 }
 
-/*Format for atex logo in security page*/
+/*Format for atex logo in safety page*/
 .hero__atex-konform {
     margin: auto;
     padding: 0;
     width: 20%;
 }
 
-/*Color format for atex logo in security page*/
+/*Color format for atex logo in safety page*/
 .hero__atex-konform svg {
     fill: black;
 }
 
 /*Lower border division container of industries table in aplicactions page*/
-.industries_aplications_division_container {
+.industries_applications_division_container {
 	display: flex;
 	flex-direction: row;
 	height: 5px;
 }
 
 
-/*Alignment and size adjustment for columns of industries table in aplications page*/
-.industries_aplications_list li{
+/*Alignment and size adjustment for columns of industries table in applications page*/
+.industries_applications_list li{
 	align-items: center;
     text-align: center;
     width: 33%;
 }
 
-/*Title format of columns of industries table in aplications page*/
-.industries_aplications_list_title {
+/*Title format of columns of industries table in applications page*/
+.industries_applications_list_title {
 	border-top: 2px solid var(--orange);
     font-size: 22px;
 	margin: 0 5%;
@@ -218,39 +218,39 @@ p {
 	text-align: center;
 }
 
-/*Text format of columns of industries table in aplications page*/
-.industries_aplications_list_text {
+/*Text format of columns of industries table in applications page*/
+.industries_applications_list_text {
 	margin: 0 5%;
     padding: 4% 2.5% 2% 2.5%;
 	text-align: center;
 }
 
 /*Lower border format of industries table in aplicactions page*/
-.industries_aplications_division {
+.industries_applications_division {
     border-bottom: 2px solid var(--orange);
     margin: 0 2.5%;
     width: 33%;
 }
 
-/*Adjusting bottom margin of limitations list in aplications page*/
-.limitations_aplications_list {
+/*Adjusting bottom margin of limitations list in applications page*/
+.limitations_applications_list {
 	margin-bottom: 2%;
 }
 
-/*Adding border in-between elements in limitations list in aplications page*/
-.limitations_aplications_list li:nth-child(n+2) {
+/*Adding border in-between elements in limitations list in applications page*/
+.limitations_applications_list li:nth-child(n+2) {
 	border-top: 1px solid rgb(235 91 37 / 40%);
     padding-top: 3%;
 }
 
-/*Adjusting margin and padding of limitations list in aplications page*/
-.limitations_aplications_list li {
+/*Adjusting margin and padding of limitations list in applications page*/
+.limitations_applications_list li {
 	margin: 4%;
     padding: 0 1%;
 }
 
 /*Times marker format for list*/
-.limitations_aplications_list li::marker {
+.limitations_applications_list li::marker {
 	color: var(--orange);
     content: "\f00d";
     font-family: "FontAwesome";
@@ -264,26 +264,27 @@ p {
     width: 100%;
 }
 
-/*Adjusting alignment of sectors list in aplications page*/
-.sectors_aplications_list li {
+/*Adjusting alignment of sectors list in applications page*/
+.sectors_applications_list li {
 	margin: 1% 4%;
 	padding: 0 1%;
 }
 
-/*Format for cards of security page */
-.security_cards_info_container {
+/*Format for cards of safety page */
+.safety_cards_info_container {
     background-color: rgb(250 185 0 / 70%);
     box-shadow: 5px 10px 8px var(--grey);
     margin: 2%;
     width: 33%;
 }
 
-/*Title format for cards of security page*/
-.security_cards_title {
+/*Title format for cards of safety page*/
+.safety_cards_title {
     background-color: rgb(235 91 37 / 85%);
     font-size: 20px;
     font-weight: bold;
     margin: 0;
+    height: 80px;
     padding: 5%;
     text-align: center;
 }
@@ -382,23 +383,23 @@ p {
     }
 
     /*Set display direction to column*/
-    .aplications_container,.guarantees_security_container, .industries_aplications_list, .sectors_aplications_list,.security_cards_container {
+    .applications_container,.guarantees_safety_container, .industries_applications_list, .sectors_applications_list,.safety_cards_container {
 		flex-direction: column;
 	}
 
-    /*Adjust padding of aplications info container*/
-    .aplications_info_container {
+    /*Adjust padding of applications info container*/
+    .applications_info_container {
         padding: 10%;
         margin: 5%
     }
 
     /*Set width to maximum */
-    .aplications_info_container,.guarantees_security_list,.hero__atex-konform,.industries_aplications_list li,.security_cards_info_container {
+    .applications_info_container,.guarantees_safety_list,.hero__atex-konform,.industries_applications_list li,.safety_cards_info_container {
         width: 100%;
     }
 
     /*Hidde elements */
-    .characteristics_functioning_container,.industries_aplications_division_container {
+    .characteristics_functioning_container,.industries_applications_division_container {
         display: none;
     }
 
@@ -417,18 +418,18 @@ p {
         margin-top: 20px;
     }
 
-    /*Remove top border and adjust padding of title on list in aplications page*/
-	.industries_aplications_list_title {
+    /*Remove top border and adjust padding of title on list in applications page*/
+	.industries_applications_list_title {
 		border-top: none;
 		padding: 3% 2.5% 3% 2.5%;
 	}
     
-    /*Add bottom border to element on list in aplications page*/
-    .industries_aplications_list li{
+    /*Add bottom border to element on list in applications page*/
+    .industries_applications_list li{
         border-bottom: 2px solid var(--orange);
     }
-    /*Adjust margin cards in security page*/
-    .security_cards_info_container {
+    /*Adjust margin cards in safety page*/
+    .safety_cards_info_container {
         margin: 5% 0;
     }
 }

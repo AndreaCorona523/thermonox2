@@ -82,14 +82,41 @@ label {
     width: 40%;
 }
 
+/*Sets margin and padding for message alert*/
+.mail_message{
+    margin: 5% 0 0 20%;
+    padding: 2%;
+}
+
+/*Sets color to green of message alert*/ 
+.mail_message-sent{
+    background-color: #f2fae3;
+    border: 2px solid #8cc14c;
+    color: #659f13;
+}
+
+/*Sets color to red of message alert*/ 
+.mail_message-error{
+    background-color: #f2fae3;
+    border: 2px solid var(--orange);
+    color: var(--orange);
+}
+
+/*Format por mail title*/ 
+.mail_title{
+    font-size: 32px;
+    letter-spacing: 0.05em;
+}
+
 /*Minimum height for message field*/
 #message {
 	min-height: 150px;
 }
 
-/*Align text of privacy policy to the left*/
+/*Align text of privacy policy to the left and sets width to 220px*/
 #privacy_policy_label {
     text-align: left;
+    width: 220px;
 }
 
 /*Format for select field*/
@@ -115,29 +142,6 @@ select {
     padding: 5px 5px;
     text-decoration: none;
 }
-
-.mail_message{
-    margin: 5% 0 0 20%;
-    padding: 2%;
-}
-
-.mail_message-sent{
-    background-color: #f2fae3;
-    border: 2px solid #8cc14c;
-    color: #659f13;
-}
-
-.mail_message-error{
-    background-color: #f2fae3;
-    border: 2px solid var(--orange);
-    color: var(--orange);
-}
-
-.mail_title{
-    font-size: 32px;
-    letter-spacing: 0.05em;
-}
-
 
 /*Size adjustment of support info container */
 .support_info_container {

@@ -11,6 +11,7 @@
 		$country=$_POST['country'];
 		$send_copy='No solicitada';
 		$privacy_policy='No aceptada';
+		$language='es';
 	}
 
 ?>
@@ -43,8 +44,8 @@
 				  <div class="selected_language"><p>Español&nbsp;</p><i class="bi-chevron-down"></i></div>
 				</div>
 				<ul class="language_menu__dropdown">
-				  <li class="language_menu__option"><a href="#">English</a></li>
-				  <li class="language_menu__option"><a href="#">Español</a></li>
+				  <li class="language_menu__option"><a href="../en/contact.php">English</a></li>
+				  <li class="language_menu__option"><a href="./contacto.php">Español</a></li>
 				</ul>
 			  </div>
 			</div>
@@ -112,7 +113,7 @@
 								</li>
 								<li>
 									<label for="message">Mensaje *</label>
-									<textarea name="message" id="message" cols="50" rows="10"> <?php if(isset($message)) echo $message ?></textarea>
+									<textarea name="message" id="message" cols="50" rows="10"><?php if(isset($message)) echo $message ?></textarea>
 								</li>
 								<li>
 									<label for="send_copy" >Envíame una copia <br>(opcional) </label>
@@ -169,7 +170,7 @@
 				<div  class="footer__item">
 				<a class="footer__sub__item" href="./politica_privacidad.html">Politica de privacidad</a>
 				<a class="footer__sub__item" href="./aviso_legal.html">Aviso Legal</a>
-				<a class="footer__sub__item" href="../assets/pdf/preguntas_frecuentes.pdf" target="_blank">Preguntas Frecuentes</a>
+      <a class="footer__sub__item" href="./preguntas_frecuentes.html">Preguntas Frecuentes</a>
 				</div>
 
 				<div  class="footer__item">
@@ -182,12 +183,12 @@
 			</div>
 			<div class="offcanvas">
 				<ul class="offcanvas_language">
-				  <li class="offcanvas_language__item"><a href="#">EN</a></li>
+				  <li class="offcanvas_language__item"><a href="../en/contact.php">EN</a></li>
 				  <li class="offcanvas_language__item">|</li>
-				  <li class="offcanvas_language__item"><a href="#">ES</a></li>
+				  <li class="offcanvas_language__item"><a href="./contacto.php">ES</a></li>
 				</ul>
 				<ul class="offcanvas_nav">
-				  <li class="offcanvas_nav__item"><a href="./index.html">Inicio</a></li>
+				  <li class="offcanvas_nav__item"><a href="./index.html">INICIO</a></li>
 				  <li class="offcanvas_nav__item">
 					<a href="./acerca_thermonox.html">THERMONOX®</a>
 					  <ul class="offcanvas_subnav">
@@ -199,7 +200,7 @@
 				  <li class="offcanvas_nav__item">
 					<a href="./acerca_thermonoxilo.html">THERMONOXILO</a>
 				  </li>
-				  <li class="offcanvas_nav__item offcanvas_nav__item--selected"><a href="./contacto.php">Contacto</a></li>
+				  <li class="offcanvas_nav__item offcanvas_nav__item--selected"><a href="./contacto.php">CONTACTO</a></li>
 				</ul>
 			</div>
 			<div class="cover" id="cover"></div>
